@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>百度新闻后台管理</title>
+    <link rel="stylesheet" type="text/css" href="./css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css">
+</head>
+
+<body>
+    <!--顶部导航条-->
+    <nav class="navbar navbar-inverse navbar-static-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">百度新闻后台管理</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <ul class="nav navbar-nav navbar-left">
+                    <li><a href="#">首页</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!--顶部导航条结束-->
+    <div class="container-fluid">
+        <div class="row">
+            <!--新增-->
+            <div class="col-md-6  col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">新增一条新闻</h3>
+                    </div>
+                    <div class="panel-body">
+                        <form>
+                            <div class="form-group">
+                                <label for="newstype">类型</label>
+                                <select class="form-control" id="newstype">
+                                    <option>精选</option>
+                                    <option>百家</option>
+                                    <option>本地</option>
+                                    <option>娱乐</option>
+                                    <option>社会</option>
+                                    <option>军事</option>
+                                    <option>女人</option>
+                                    <option>搞笑</option>
+                                    <option>互联网</option>
+                                    <option>科技</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="newsimg">图片</label>
+                                <input type="text" class="form-control" id="newsimg" placeholder="图片">
+                            </div>
+                            <div class="form-group">
+                                <label for="newstitle">标题</label>
+                                <input type="text" class="form-control" id="newstitle" placeholder="标题">
+                            </div>
+                            <div class="form-group">
+                                <label for="newstime">时间</label>
+                                <input type="datetime-local" class="form-control" id="newstime">
+                            </div>
+                            <div class="form-group">
+                                <label for="newssrc">来源</label>
+                                <input type="text" class="form-control" id="newssrc" placeholder="来源">
+                            </div>
+                            <button class="btn btn-primary" id="addnews">新增新闻</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!--新增结束-->
+            <!--新闻列表-->
+            <div class="col-md-6  col-sm-12">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">新闻列表</h3>
+                    </div>
+                    <div class="panel-body">
+                        <table class="table" id="newstable">
+                            <thead>
+                                <tr>
+                                    <th>id</th>
+                                    <th>类型</th>
+                                    <th>标题</th>
+                                    <th>时间</th>
+                                    <th>来源</th>
+                                    <th>操作</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                               <!--自动刷新-->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+            <!--新闻列表结束-->
+        </div>
+    </div>
+    <!-- Modal_delete -->
+    <div class="modal fade" id="delete_modal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">警告</h4>
+                </div>
+                <div class="modal-body">
+                    删除无法撤销
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" id="delete_confirm" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Modal_update -->
+    <div class="modal fade" id="update_modal" tabindex="-1" role="dialog" aria-labelledby="">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title">编辑</h4>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="newstype">类型</label>
+                            <select class="form-control" id="unewstype">
+                                <option>精选</option>
+                                <option>百家</option>
+                                <option>本地</option>
+                                <option>娱乐</option>
+                                <option>社会</option>
+                                <option>军事</option>
+                                <option>女人</option>
+                                <option>搞笑</option>
+                                <option>互联网</option>
+                                <option>科技</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="newsimg">图片</label>
+                            <input type="text" class="form-control" id="unewsimg" placeholder="图片">
+                        </div>
+                        <div class="form-group">
+                            <label for="newstitle">标题</label>
+                            <input type="text" class="form-control" id="unewstitle" placeholder="标题">
+                        </div>
+                        <div class="form-group">
+                            <label for="newstime">时间</label>
+                            <input type="datetime-local" class="form-control" id="unewstime">
+                        </div>
+                        <div class="form-group">
+                            <label for="newssrc">来源</label>
+                            <input type="text" class="form-control" id="unewssrc" placeholder="来源">
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                    <button type="button" id="update_confirm" class="btn btn-primary">确定</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="./js/jquery-3.1.0.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src=./js/admin.js></script>
+</body>
+
+</html>

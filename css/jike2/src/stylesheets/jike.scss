@@ -1,0 +1,1407 @@
+//极客绿
+$jike_green:#35b558;
+$bg_color:#f5f5f5;
+//基本样式
+header,
+article,
+section,
+footer,
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    background: $bg_color;
+}
+
+//头部
+header {
+    position: relative;
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+    height: 60px;
+    border-bottom: 1px solid #ececec;
+    background: #fff;
+    z-index: 8;
+    .container {
+        margin: 0 auto;
+        width: 1000px;
+        height: 60px;
+        line-height: 60px;
+        //头部logo
+        .logo {
+            width: 109px;
+            display: inline-block;
+            margin-right: 60px;
+            height: 60px;
+            float: left;
+            img {
+                float: left;
+                width: 109px;
+                margin-top: 10px;
+                border: 0;
+            }
+        }
+        //头部导航
+        nav {
+            height: 60px;
+            display: inline-block;
+            float: left;
+            a {
+                color: #333;
+            }
+            a:hover {
+                color: $jike_green;
+            }
+            li>a:nth-child(1) {
+                color: $jike_green;
+            }
+            li {
+                position: relative;
+                font-size: 14px;
+                display: inline-block;
+                margin-right: 50px;
+                cursor: pointer;
+                height: 60px;
+                float: left;
+                //导航子菜单
+                .submenu {
+                    display: none;
+                    opacity: 0;
+                    position: absolute;
+                    top: 60px;
+                    left: 0;
+                    background: #fff;
+                    font-size: 12px;
+                    color: #666;
+                    width: 280px;
+                    z-index: 7;
+                    h3 {
+                        margin: 10px 0;
+                        padding: 0 15px;
+                        background: #fafafa;
+                        height: 28px;
+                        line-height: 28px;
+                        font-size: 12px;
+                        font-weight: 300;
+                    }
+                    a {
+                        display: block;
+                        height: 30px;
+                        line-height: 30px;
+                        padding: 0 15px;
+                    }
+                    &>i {
+                        margin-left: 5px;
+                    }
+                    @mixin icon_comm {
+                        width: 14px;
+                        height: 14px;
+                        display: inline-block;
+                        margin-right: 10px!important;
+                        vertical-align: middle;
+                    }
+                    i.web_icon {
+                        background: url("../images/allicon.png") 0 0 no-repeat;
+                        background-size: 64px 64px;
+                        background-position: -15px -27px;
+                        @include icon_comm;
+                    }
+                    i.python_icon {
+                        background: url("../images/allicon3.png") 0 0 no-repeat;
+                        background-size: 16px 148px;
+                        background-position: -2px -2px;
+                        @include icon_comm;
+                    }
+                    i.go_icon {
+                        background: url("../images/allicon3.png") 0 0 no-repeat;
+                        background-size: 16px 148px;
+                        background-position: -2px -38px;
+                        @include icon_comm;
+                    }
+                    i.ios_icon {
+                        background: url("../images/allicon3.png") 0 0 no-repeat;
+                        background-size: 16px 148px;
+                        background-position: -2px -82px;
+                        @include icon_comm;
+                    }
+                }
+                &:hover .submenu {
+                    display: block;
+                    opacity: 1;
+                    animation: myfirst 0.8s ease normal;
+                    -moz-animation: myfirst 0.8s ease normal;
+                    -webkit-animation: myfirst 0.8s ease normal;
+                }
+                .vip_lesson {
+                    a {
+                        display: block;
+                        height: 40px;
+                        line-height: 40px;
+                        color: #666;
+                        span {
+                            color: #bbb;
+                            float: right;
+                        }
+                    }
+                    a:hover {
+                        background: #fafafa;
+                        color: $jike_green;
+                    }
+                    i {
+                        background: url("../images/allicon.png") 0 0 no-repeat;
+                        background-size: 64px 64px;
+                        width: 14px;
+                        height: 14px;
+                        display: inline-block;
+                        margin-right: 10px!important;
+                        vertical-align: middle;
+                    }
+                    i.kck_icon {
+                        background-position: 0 -13px;
+                    }
+                    i.zyljt_icon {
+                        background-position: -45px 0;
+                    }
+                    i.zstxt_icon {
+                        background-position: -30px -13px;
+                    }
+                    i.xlkc_icon {
+                        background: url("../images/xlkc2.png") 0 0 no-repeat;
+                        background-position: 0 0;
+                        background-size: 12px 12px;
+                    }
+                    i.kcbq_icon {
+                        background-position: -15px -13px;
+                    }
+                    i.vip_icon {
+                        background-position: -16px 0;
+                    }
+                    i.jswd_icon {
+                        background-position: 0 -27px;
+                    }
+                    i.wiki_icon {
+                        background-position: -29px -27px;
+                    }
+                    i.sq_icon {
+                        background-position: 0 2px;
+                    }
+                    i.zygx_icon {
+                        background-position: -30px 0;
+                    }
+                }
+            }
+            li:hover {
+                color: $jike_green;
+            }
+            li:last-child {
+                margin-right: 0;
+            }
+            //导航菜单小箭头
+            i.arrow {
+                padding: 0px;
+                margin: 0px;
+                margin: 0px 0px 2px 5px;
+                width: 8px;
+                height: 8px;
+                border-top: 1px solid #c1c1c1;
+                border-left: 1px solid #c1c1c1;
+                display: inline-block;
+                transform: rotate(-135deg);
+                -webkit-transform: rotate(-135deg);
+                -moz-transform: rotate(-135deg);
+                -ms-transform: rotate(-135deg);
+                transform-origin: 4px 4px;
+                box-sizing: border-box;
+                vertical-align: middle;
+            }
+            li:hover i.arrow {
+                margin-left: 5px;
+                margin-bottom: -2px;
+                border-top: 1px solid $jike_green;
+                border-left: 1px solid $jike_green;
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                animation: rotate 1s ease normal;
+                -moz-animation: rotate 1s ease normal;
+                -webkit-animation: rotate 1s ease normal;
+            }
+        }
+    }
+    //头部导航右上角图标
+    .icon_box {
+        float: right;
+        text-align: right;
+        width: 200px;
+        margin-right: 10px;
+        height: 60px;
+        span {
+            position: relative;
+            height: 60px;
+            width: 17px;
+            display: inline-block;
+            margin-left: 25px;
+            cursor: pointer;
+            box-sizing: border-box;
+            vertical-align: middle;
+        }
+        .loginlist .submenu {
+            display: none;
+            opacity: 0;
+            padding: 10px 0;
+            background: #fff;
+            position: absolute;
+            width: 120px;
+            top: 58px;
+            right: -10px;
+            z-index: 9;
+            //导航小三角
+            .top_icon {
+                transform: rotate(45deg);
+                -webkit-transform: rotate(45deg);
+                -moz-transform: rotate(45deg);
+                -ms-transform: rotate(45deg);
+                display: block;
+                position: absolute;
+                top: -8px;
+                right: 10px;
+                width: 15px;
+                height: 15px;
+                border-top: 1px solid #ececec;
+                border-left: 1px solid #ececec;
+                display: inline-block;
+                background: #fff;
+            }
+        }
+        .loginlist:hover .submenu {
+            display: block;
+            opacity: 1;
+            animation: listshow 0.8s ease normal;
+            -moz-animation: listshow 0.8s ease normal;
+            -webkit-animation: listshow 0.8s ease normal;
+        }
+        .loginlist a:hover {
+            color: $jike_green;
+        }
+        @mixin bg_size_position {
+            background-size: 17px 17px;
+            background-position: 0, 0;
+        }
+        .search_icon {
+            background: url("../images/search-icon.png") 0 0 no-repeat;
+            @include bg_size_position;
+        }
+        .search_icon:hover {
+            background: url("../images/search-icon2.png") 0 0 no-repeat;
+            @include bg_size_position;
+        }
+        .app_icon {
+            background: url("../images/app-icon.png") 0 0 no-repeat;
+            @include bg_size_position;
+            .submenu {
+                padding: 0;
+                right: -50px;
+                .top_icon {
+                    right: 50px;
+                }
+            }
+        }
+        .app_icon:hover {
+            background: url("../images/app-icon2.png") 0 0 no-repeat;
+            @include bg_size_position;
+        }
+        .login_icon {
+            background: url("../images/login-icon.png") 0 0 no-repeat;
+            @include bg_size_position;
+            dd {
+                text-align: left;
+                font-size: 12px;
+                line-height: 35px;
+                vertical-align: middle;
+                margin: 0;
+                padding-left: 10px;
+                a {
+                    color: #666;
+                    height: 35px;
+                    line-height: 35px;
+                    display: block;
+                    i {
+                        background: url("../images/allicon2.png") 0 0 no-repeat;
+                        background-size: 64px 64px;
+                        width: 12px;
+                        height: 12px;
+                        margin-right: 10px;
+                        display: inline-block;
+                    }
+                    i.xxzx_icon {
+                        background-position: -16px -15px;
+                    }
+                    i.grzy_icon {
+                        background-position: -45px -1px;
+                    }
+                    i.xxtz_icon {
+                        background-position: -16px -30px;
+                    }
+                    i.zhsz_icon {
+                        background-position: -30px -1px;
+                    }
+                }
+                @mixin btn {
+                    width: 45%;
+                    height: 35px;
+                    line-height: 35px;
+                    display: inline-block;
+                    text-align: center;
+                    box-sizing: border-box;
+                }
+                a.reg_btn {
+                    @include btn;
+                }
+                a.login_btn {
+                    @include btn;
+                }
+            }
+            dd:hover {
+                background: #f5f5f5;
+            }
+        }
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(-135deg);
+        -webkit-transform: rotate(-135deg);
+        -moz-transform: rotate(-135deg);
+        -ms-transform: rotate(-135deg);
+    }
+    100% {
+        transform: rotate(45deg);
+        -webkit-transform: rotate(45deg);
+        -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+    }
+}
+
+@keyframes myfirst {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes listshow {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+//正文
+section>ul>li:nth-child(n+2):hover {
+    /*border: 1px solid #ccc;*/
+    box-shadow: 0 2px 6px #ccc;
+    transition: box-shadow .5s;
+    -moz-transition: box-shadow .5s;
+    -webkit-transition: box-shadow .5s;
+    -o-transition: box-shadow .5s
+}
+
+section {
+    .h2container {
+        padding-top: 10px;
+        width: 230px;
+        height: 330px;
+        background: #fff;
+        h2 {
+            font-size: 19px;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 15px;
+            border-left: 2px solid $jike_green;
+        }
+        .h2text {
+            font-size: 14px;
+            color: #333;
+            padding-left: 17px;
+            margin-top: 5px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .h2img {
+            text-align: center;
+            height: 155px;
+            img {
+                margin-top: 38px;
+                width: 120px;
+                height: 88px;
+            }
+        }
+        &>span {
+            margin-left: 17px;
+            margin-bottom: 5px;
+            display: block;
+            width: 62px;
+            height: 18px;
+            font-size: 12px;
+            border: 1px solid #eee;
+            line-height: 16px;
+            border-radius: 2px;
+            color: gray;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+        &>span:before {
+            content: '';
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            background: #2d85ca url(../images/h2icon_a96e146.png) no-repeat center / 15px 14px;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+            margin-right: 4px;
+        }
+        &>p {
+            font-size: 12px;
+            color: #666;
+            line-height: 22px;
+            padding-left: 17px;
+        }
+    }
+}
+
+@mixin transition_bg($time:0.1s) {
+    transition: background $time;
+    -moz-transition: background $time;
+    -webkit-transition: background $time;
+    -o-transition: background $time;
+}
+
+//正文：横幅
+.jkbanner {
+    position: relative;
+    height: 525px;
+    text-align: center;
+    min-width: 1000px;
+    background: url(../images/sp_56c863c.jpg) no-repeat center / 1920px 540px;
+    box-sizing: border-box;
+    .video_container {
+        position: relative;
+        display: inline-block;
+        width: 100%;
+        height: 525px;
+        overflow: hidden;
+        .index_video {
+            display: block;
+            position: relative;
+            left: 50%;
+            margin-left: -960px;
+        }
+    }
+    .bannerinfo {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: 525px;
+        top: 0;
+        left: 0;
+        &>h1 {
+            font-size: 35px;
+            color: #fff;
+            margin-top: 45px;
+            margin-bottom: 20px;
+            height: 45px;
+        }
+        &>p {
+            font-size: 13px;
+            color: #fafafa;
+            line-height: 21px;
+            height: 21px;
+        }
+        .banner_download {
+            height: 44px;
+            margin-top: 48px;
+            a {
+                display: inline-block;
+                height: 44px;
+                width: 141px;
+            }
+            .android_download {
+                background: url(../images/anddown_92313c1.png) no-repeat center / 141px 44px;
+                margin-right: 20px;
+                @include transition_bg;
+            }
+            .android_download:hover {
+                background: url(../images/anddownhover_6bed6d5.png) no-repeat center / 141px 44px;
+            }
+            .ios_download {
+                background: url(../images/iosdown_0813309.png) no-repeat center / 141px 44px;
+                @include transition_bg;
+            }
+            .ios_download:hover {
+                background: url(../images/iosdownhover_43e4f99.png) no-repeat center / 141px 44px;
+            }
+        }
+        &>span {
+            margin-top: 45px;
+            font-size: 12px;
+            color: #fafafa;
+            display: block;
+            height: 18px;
+        }
+        .banner_icon {
+            margin-top: 15px;
+            height: 38px;
+            &>a {
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+            }
+            .wechatLogin {
+                background: url(../images/weixinlogin_204d5be.png) no-repeat center / 38px 38px;
+                @include transition_bg(0.5s);
+            }
+            .wechatLogin:hover {
+                background: url(../images/weixinloginhover_acca8e3.png) no-repeat center / 38px 38px;
+            }
+            .qqLogin {
+                margin-left: 25px;
+                background: url(../images/qqlogin_43fbf38.png) no-repeat center / 38px 38px;
+                @include transition_bg(0.5s);
+            }
+            .qqLogin:hover {
+                background: url(../images/qqloginhover_fd0f74b.png) no-repeat center / 38px 38px;
+            }
+            .weiboLogin {
+                margin-left: 25px;
+                background: url(../images/weibologin_7cb8c71.png) no-repeat center / 38px 38px;
+                @include transition_bg(0.5s);
+            }
+            .weiboLogin:hover {
+                background: url(../images/weibologinhover_0c48361.png) no-repeat center / 38px 38px;
+            }
+            .phoneLogin {
+                margin-left: 25px;
+                background: url(../images/phonelogin_39c73f9.png) no-repeat center / 38px 38px;
+                @include transition_bg(0.5s);
+            }
+            .phoneLogin:hover {
+                background: url(../images/phoneloginhover_d5ddac1.png) no-repeat center / 38px 38px;
+            }
+        }
+        .banner_card {
+            height: 240px;
+            width: 1000px;
+            margin: 0 auto;
+            position: relative;
+            top: 36px;
+            &>div {
+                float: left;
+                width: 320px;
+                height: 240px;
+                background: #fff;
+                margin-right: 20px;
+                .cardinfo {
+                    height: 130px;
+                    background: #f9f9f9;
+                    &>span {
+                        font-size: 18px;
+                        display: block;
+                        height: 50px;
+                        line-height: 50px;
+                        color: #333;
+                    }
+                    &>p {
+                        border-top: 1px solid #eee;
+                        height: 80px;
+                        padding: 10px 17px;
+                        text-align: left;
+                        font-size: 13px;
+                        color: #444;
+                        line-height: 21px;
+                        overflow: hidden;
+                    }
+                }
+            }
+            &>div:last-child {
+                margin-right: 0;
+            }
+            .college {
+                .collegelist {
+                    padding: 17px 10px;
+                    height: 110px;
+                    ul {
+                        height: 100%;
+                        li {
+                            float: left;
+                            height: 100%;
+                            width: 25%;
+                            font-size: 12px;
+                            color: #666;
+                            text-align: center;
+                            a {
+                                display: block;
+                                width: 100%;
+                                height: 100%;
+                                div {
+                                    display: inline-block;
+                                    width: 50px;
+                                    height: 50px;
+                                    border: 1px solid #eee;
+                                    border-radius: 50%;
+                                    @include transition_bg(0.5s);
+                                }
+                                span {
+                                    display: block;
+                                    margin-top: 7px;
+                                    color: #666;
+                                    @include transition_bg(0.5s);
+                                }
+                                .web_card {
+                                    background: url(../images/cardhtml5_c4de6b8.jpg) no-repeat center / 26px 35px;
+                                }
+                                .python_card {
+                                    background: url(../images/cardpython_46dafa5.png) no-repeat center / 35px 35px;
+                                }
+                                .go_card {
+                                    background: url(../images/cardgo_f7d5603.png) no-repeat center / 25px 35px;
+                                }
+                                .ios_card {
+                                    background: url(../images/cardios_1b210b7.jpg) no-repeat center / 30px 35px;
+                                }
+                            }
+                        }
+                        li:hover span {
+                            color: $jike_green;
+                        }
+                        li:hover .web_card {
+                            border: 1px solid #dc4d10;
+                        }
+                        li:hover .python_card {
+                            border: 1px solid #f9d423;
+                        }
+                        li:hover .go_card {
+                            border: 1px solid #6ad7e5;
+                        }
+                        li:hover .ios_card {
+                            border: 1px solid #666;
+                        }
+                    }
+                }
+            }
+            .library {
+                .librarylist {
+                    padding: 17px 10px;
+                    height: 110px;
+                }
+                li {
+                    float: left;
+                    height: 100%;
+                    width: 50%;
+                    font-size: 12px;
+                    color: #666;
+                    text-align: center;
+                    a {
+                        display: block;
+                        width: 100%;
+                        height: 100%;
+                        div {
+                            display: inline-block;
+                            width: 100%;
+                            height: 57px;
+                            font-size: 13px;
+                            color: #444;
+                            padding-top: 35px;
+                        }
+                        span {
+                            display: block;
+                            color: #666;
+                        }
+                        .video_card {
+                            background: url(../images/cardvideo_744765b.jpg) no-repeat top center / 30px 30px;
+                        }
+                        .wiki_card {
+                            background: url(../images/cardwiki_5eaea4b.jpg) no-repeat top center / 25px 26px;
+                        }
+                    }
+                }
+                li:hover div {
+                    color: $jike_green;
+                }
+            }
+            .community {
+                .communitylist {
+                    padding: 17px 10px;
+                    height: 110px;
+                    li {
+                        float: left;
+                        height: 100%;
+                        width: 33.33%;
+                        font-size: 12px;
+                        color: #666;
+                        text-align: center;
+                        div {
+                            display: inline-block;
+                            width: 100%;
+                            height: 57px;
+                            font-size: 13px;
+                            color: #444;
+                            padding-top: 35px;
+                        }
+                        .xue_card {
+                            background: url(../images/cardxue_99b0a45.jpg) no-repeat top center / 33px 28px;
+                        }
+                        .jiao_card {
+                            background: url(../images/cardjiao_d70bff6.jpg) no-repeat top center / 36px 27px;
+                        }
+                        .bu_card {
+                            background: url(../images/cardbu_1d16287.jpg) no-repeat top center / 22px 30px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@mixin jkjiuye_styles {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 330px;
+    position: relative;
+}
+
+//正文：就业
+.jkjiuye {
+    @include jkjiuye_styles;
+    margin-top: 140px;
+    ul {
+        height: 100%;
+        width: 100%;
+        &>li {
+            float: left;
+            margin-right: 14px;
+            background: #fff;
+        }
+        &>li a {
+            display: block;
+            height: 100%;
+        }
+        &>li img {
+            width: 100%;
+            height: 100%;
+        }
+        .h2container>span:before {
+            background: $jike_green url(../images/h2icon_a96e146.png) no-repeat center / 15px 14px;
+        }
+        &>li:nth-child(2),
+        &>li:nth-child(3) {
+            width: 371px;
+            height: 180px;
+            margin-bottom: 14px;
+        }
+        &>li:nth-child(4),
+        &>li:nth-child(5),
+        &>li:nth-child(6) {
+            width: 243px;
+            height: 135px;
+        }
+        &>li:last-child {
+            width: 242px;
+        }
+        &>li:nth-child(3),
+        &>li:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+//正文：基础
+.jkbase {
+    @include jkjiuye_styles;
+    ul {
+        height: 100%;
+        width: 100%;
+        &>li {
+            float: left;
+            margin-right: 14px;
+            background: #fff;
+            width: 243px;
+            height: 158px;
+            a {
+                display: block;
+                height: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &>li.h2container {
+            padding-top: 10px;
+            width: 230px;
+            height: 330px;
+            background: #fff;
+        }
+        &>li:nth-child(2),
+        &>li:nth-child(3),
+        &>li:nth-child(4) {
+            margin-bottom: 14px;
+        }
+        &>li:nth-child(5),
+        &>li:nth-child(6),
+        &>li:nth-child(7) {}
+        &>li:nth-child(4),
+        &>li:last-child {
+            width: 242px;
+            margin-right: 0;
+        }
+    }
+}
+
+//专项
+.jksku {
+    @include jkjiuye_styles;
+    ul {
+        height: 100%;
+        width: 100%;
+        &>li {
+            float: left;
+            margin-right: 14px;
+            background: #fff;
+            width: 371px;
+            height: 158px;
+            a {
+                display: block;
+                width: 100%;
+            }
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        &>li:nth-child(2),
+        &>li:nth-child(3) {
+            margin-bottom: 14px;
+        }
+        &>li:last-child,
+        &>li:nth-child(3) {
+            margin-right: 0;
+        }
+    }
+    .h2container {
+        padding-top: 10px;
+        width: 230px;
+        height: 330px;
+        background: #fff;
+        h2 {
+            font-size: 19px;
+            height: 35px;
+            line-height: 35px;
+            padding-left: 15px;
+            border-left: 2px solid $jike_green;
+        }
+        .h2text {
+            font-size: 14px;
+            color: #333;
+            padding-left: 17px;
+            margin-top: 5px;
+            height: 20px;
+            line-height: 20px;
+        }
+        .h2img {
+            text-align: center;
+            height: 155px;
+            img {
+                margin-top: 38px;
+                width: 120px;
+                height: 88px;
+            }
+        }
+        &>span {
+            margin-left: 17px;
+            margin-bottom: 5px;
+            display: block;
+            width: 62px;
+            height: 18px;
+            font-size: 12px;
+            border: 1px solid #eee;
+            line-height: 16px;
+            border-radius: 2px;
+            color: gray;
+            vertical-align: middle;
+            overflow: hidden;
+        }
+        &>span:before {
+            content: '';
+            display: inline-block;
+            height: 16px;
+            width: 16px;
+            background: #ff5c00 url(../images/h2icon_a96e146.png) no-repeat center / 15px 14px;
+            vertical-align: middle;
+            position: relative;
+            top: -1px;
+            margin-right: 4px;
+        }
+        &>p {
+            font-size: 12px;
+            color: #666;
+            line-height: 22px;
+            padding-left: 17px;
+        }
+    }
+}
+
+@mixin jkdk_style {
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 158px;
+    position: relative;
+}
+
+//dk
+.jkdk {
+    @include jkdk_style;
+    ul {
+        width: 100%;
+        height: 100%;
+        &>li {
+            float: left;
+            margin-right: 14px;
+            background: #fff;
+            width: 371px;
+            height: 158px;
+        }
+        &>li.h2container {
+            padding-top: 10px;
+            width: 230px;
+            height: 158px;
+            background: #fff;
+            .h2img {
+                height: 88px;
+            }
+            img {
+                margin-top: 17px;
+                width: 105px;
+                height: 72px
+            }
+        }
+        &>li:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@mixin jkbai_ul {
+    ul {
+        width: 100%;
+        height: 100%;
+        &>li {
+            float: left;
+            margin-right: 14px;
+            background: #fff;
+            width: 243px;
+            height: 158px;
+            text-align: center;
+            a {
+                display: block;
+                height: 100%;
+            }
+            span {
+                display: block;
+                font-size: 18px;
+                color: #333;
+                height: 25px;
+                line-height: 25px;
+                margin-top: 10px;
+            }
+            p {
+                font-size: 12px;
+                color: #666;
+                height: 16px;
+                line-height: 16px;
+                margin-top: 5px;
+            }
+        }
+        &>li:last-child {
+            margin-right: 0;
+            width: 242px;
+        }
+        &>li:last-child:hover {
+            box-shadow: none;
+        }
+        .h2container {
+            padding-top: 10px;
+            width: 230px;
+            height: 158px;
+            background: #fff;
+            text-align: left;
+            .h2img {
+                height: 88px;
+                img {
+                    margin-top: 17px;
+                    width: 95px;
+                    height: 72px;
+                }
+            }
+        }
+        .baiimg {
+            display: block;
+            height: 55px;
+            margin-top: 30px;
+        }
+        &>li:nth-child(2) img {
+            width: 41px;
+            height: 55px;
+        }
+        &>li:nth-child(3) img {
+            width: 55px;
+            height: 48px;
+        }
+        &>li:nth-child(4) img {
+            width: 55px;
+            height: 55px;
+        }
+    }
+}
+
+//小白
+.jkbai {
+    @include jkdk_style;
+    @include jkbai_ul;
+}
+
+//学员
+.jkstudent {
+    box-sizing: border-box;
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 500px;
+    position: relative;
+    &>ul {
+        height: 100%;
+        width: 100%;
+        &>li {
+            float: left;
+            margin-right: 14px;
+            background: #fff;
+            width: 243px;
+            height: 243px;
+            text-align: center;
+            padding-top: 30px;
+            a {
+                display: block;
+                height: 100%;
+            }
+            .s_pic {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                border-radius: 50%;
+                border: 1px solid #eee;
+            }
+            .s_name {
+                display: block;
+                font-size: 16px;
+                color: #666;
+                margin-top: 10px;
+            }
+            .s_job {
+                font-size: 12px;
+                color: gray;
+                height: 16px;
+                line-height: 16px;
+                margin-top: 10px;
+            }
+            .s_status {
+                font-size: 12px;
+                color: gray;
+                height: 16px;
+                margin-top: 35px;
+            }
+            .s_comp {
+                margin-top: 5px;
+                height: 20px;
+            }
+        }
+        &>li:nth-child(n+5) {
+            margin-top: 14px;
+        }
+        &>li:nth-child(4),
+        &>li:last-child {
+            width: 242px;
+            margin-right: 0;
+        }
+        .h2container {
+            text-align: left;
+            padding-top: 10px;
+            width: 230px;
+            height: 500px;
+            background: #fff;
+            &>ul {
+                padding-left: 15px;
+                padding-top: 10px;
+                width: 100%;
+                &>li {
+                    float: left;
+                    width: 56px;
+                    height: 56px;
+                    background: #ccc;
+                    margin-right: 14px;
+                }
+                &>li:nth-child(3n) {
+                    margin-right: 0;
+                }
+                &>li:nth-child(n+4) {
+                    margin-top: 14px;
+                }
+            }
+        }
+    }
+}
+
+//组织
+.jkorganization {
+    @include jkdk_style;
+    @include jkbai_ul;
+}
+
+//底部
+footer {
+    margin-top: 50px!important;
+    min-width: 1000px;
+    border-top: 1px solid #e4e4e4;
+    background: #fff;
+    .info {
+        position: relative;
+        width: 1000px;
+        height: 215px;
+        margin: 0 auto;
+        border-bottom: 1px solid #f5f5f5;
+        padding-left: 224px;
+        padding-top: 25px;
+        .logo {
+            position: absolute;
+            left: 0;
+            top: 25px;
+            display: inline-block;
+            width: 160px;
+            img {
+                width: 109px;
+                height: 40px;
+                display: block;
+            }
+            p {
+                font-size: 12px;
+                color: #999;
+                margin-top: 20px;
+            }
+        }
+        dl {
+            width: 135px;
+            color: #808080;
+            float: left;
+            dt {
+                font-size: 14px;
+                line-height: 30px;
+            }
+            dd {
+                font-size: 12px;
+                line-height: 30px;
+                a {
+                    color: #999999;
+                }
+                a:hover {
+                    color: $jike_green;
+                }
+            }
+        }
+        .jk_down {
+            position: absolute;
+            right: 0;
+            top: 25px;
+            display: inline-block;
+            width: 175px;
+            text-align: left;
+            .hot_tel {
+                color: #808080;
+                font-size: 14px;
+                margin-bottom: 20px;
+            }
+            .downCon {
+                position: relative;
+                display: inline-block;
+                width: 140px;
+                height: 30px;
+                border: 1px solid #eeeeee;
+                margin-bottom: 10px;
+                line-height: 30px;
+                color: #808080;
+                font-size: 13px;
+                padding-left: 40px;
+                cursor: pointer;
+                img {
+                    width: 115px;
+                    height: 153px;
+                    position: absolute;
+                    top: -157px;
+                    left: 12px;
+                    z-index: 2;
+                    display: none;
+                }
+            }
+            .downCon:hover img {
+                display: block;
+            }
+            .down_ios {
+                background: url(../images/icon-down-ios.png)no-repeat 0 0;
+                background-size: 30px 30px;
+            }
+            .down_and {
+                background: url(../images/icon-down-and.png)no-repeat 0 0;
+                background-size: 30px 30px;
+            }
+        }
+    }
+    .copyright {
+        font-size: 12px;
+        color: #999;
+        margin: 0 auto;
+        width: 1000px;
+        text-align: center;
+        padding: 15px 0;
+        font-family: Verdana, "Lantinghei SC", "Hiragino Sans GB", "Microsoft Yahei", Helvetica, arial, \5b8b\4f53, sans-serif;
+        strong {
+            font-weight: 400;
+        }
+        a {
+            color: #999;
+            @mixin down {
+                float: right;
+                height: 15px;
+                width: 20px;
+            }
+            .down_wechat {
+                @include down;
+                background: url(../images/icon-down-wechat.png)no-repeat 0 0;
+                background-size: 18px 15px;
+            }
+            .down_sina {
+                @include down;
+                margin-right: 10px;
+                background: url(../images/icon-down-sina.png)no-repeat 0 0;
+                background-size: 20px 15px;
+            }
+        }
+        a:hover {
+            color: $jike_green;
+        }
+    }
+}
+
+//去页面顶部
+.go_top {
+    position: fixed;
+    left: 50%;
+    margin-left: 510px;
+    bottom: 50px;
+    width: 34px;
+    text-align: center;
+    z-index: 20;
+    span {
+        cursor: pointer;
+    }
+    .top {
+        display: block;
+        background: url(../images/gotop.jpg) 0 0 no-repeat;
+        background-size: 34px 103px;
+        width: 34px;
+        height: 34px;
+    }
+    .jk-app {
+        position: relative;
+        display: block;
+        background: #f7f7f7 url(../images/phone-1.png) center center no-repeat;
+        background-size: 12px 24px;
+        width: 34px;
+        height: 35px;
+        border-bottom: 1px solid #e0e0e0;
+        .appewm {
+            background: url(../images/appewm.png) center center no-repeat;
+            background-size: 100%;
+            width: 126px;
+            height: 159px;
+            position: absolute;
+            z-index: 21;
+            left: -126px;
+            top: -70px;
+            display: none;
+        }
+    }
+    .jk-app:hover {
+        background: #f7f7f7 url(../images/phone-2.png) center center no-repeat;
+        background-size: 12px 24px;
+    }
+    .jk-app:hover .appewm {
+        display: block;
+    }
+    .diaocha {
+        display: block;
+        width: 34px;
+        height: 34px;
+    }
+    .qq-online1 {
+        position: relative;
+        display: block;
+        background: #f7f7f7 url(../images/kfu1.png) center center no-repeat;
+        width: 34px;
+        height: 35px;
+        border-top: 1px solid #e0e0e0;
+    }
+    .qq-online:hover .kefu {
+        display: block;
+    }
+    .qq-online .kefu {
+        position: absolute;
+        padding: 5px;
+        background: #f7f7f7;
+        color: #333;
+        font-size: 12px;
+        text-align: center;
+        width: 180px;
+        left: -190px;
+        display: none;
+        i {
+            width: 0;
+            height: 0;
+            border-top: 8px solid transparent;
+            border-left: 10px solid #f7f7f7;
+            border-bottom: 8px solid transparent;
+            position: absolute;
+            right: -10px;
+            top: 12px;
+        }
+    }
+}

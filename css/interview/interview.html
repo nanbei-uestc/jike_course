@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>interview</title>
+    <link rel="stylesheet" type="text/css" href="./neat.css">
+    <link rel="stylesheet" type="text/css" href="./interview.css">
+</head>
+
+<body>
+    <article>
+        <h2>前端面试题</h2>
+        <div class="subject">
+            <h4>1.对WEB标准以及W3C的理解与认识</h4>
+            <p>标签闭合、标签小写、不乱嵌套、提高搜索机器人搜索几率、使用外 链css和js脚本、结构行为表现的分离、文件下载与页面速度更快、内容能被更多的用户所访问、内容能被更广泛的设备所访问、更少的代码和组件，容易维护、改版方便，不需要变动页面内容、提供打印版本而不需要复制内容、提高网站易用性；</p>
+        </div>
+        <div class="subject">
+            <h4>2.xhtml和html有什么区别</h4>
+            <span>HTML是一种基本的WEB网页设计语言，XHTML是一个基于XML的置标语言</span>
+            <span>最主要的不同：</span>
+            <span>XHTML 元素必须被正确地嵌套。</span>
+            <span>XHTML 元素必须被关闭。</span>
+            <span>标签名必须用小写字母。</span>
+            <span>XHTML 文档必须拥有根元素。</span>
+        </div>
+        <div class="subject">
+            <h4>3.Doctype? 严格模式与混杂模式-如何触发这两种模式，区分它们有何意义? </h4>
+            <span>用于声明文档使用那种规范（html/Xhtml）一般为 严格 过度 基于框架的html文档</span>
+            <span>加入XMl声明可触发，解析方式更改为IE5.5 拥有IE5.5的bug</span>
+        </div>
+        <div class="subject">
+            <h4>4.行内元素有哪些?块级元素有哪些?CSS的盒模型?</h4>
+            <span>块级元素：div p h1 h2 h3 h4 form ul</span>
+            <span>行内元素: a b br i span input select</span>
+            <span>Css盒模型:内容，border ,margin，padding</span>
+        </div>
+        <div class="subject">
+            <h4>5.CSS引入的方式有哪些? link和@import的区别是?</h4>
+            <span>内联 内嵌 外链 导入</span>
+            <span>区别 ：同时加载</span>
+            <span>前者无兼容性，后者CSS2.1以下浏览器不支持</span>
+            <span>Link 支持使用javascript改变样式，后者不可</span>
+        </div>
+        <div class="subject">
+            <h4>6.CSS选择符有哪些?哪些属性可以继承?优先级算法如何计算?内联和important哪个优先级高?</h4>
+            <span>标签选择符 类选择符 id选择符</span>
+            <span>继承不如指定  Id>class>标签选择</span>
+            <span>后者优先级高</span>
+        </div>
+        <div class="subject">
+            <h4>7.前端页面有哪三层构成，分别是什么?作用是什么?</h4>
+            <p>结构层 Html 表示层 CSS 行为层 js
+            </p>
+        </div>
+        <div class="subject">
+            <h4>8.css的基本语句构成是?</h4>
+            <p>选择器{属性1:值1;属性2:值2;……}
+            </p>
+        </div>
+        <div class="subject">
+            <h4>9.你做的页面在哪些流览器测试过?这些浏览器的内核分别是什么?</h4>
+            <p>Ie(Ie内核) 火狐（Gecko） 谷歌（webkit） opear(Presto)</p>
+        </div>
+        <div class="subject">
+            <h4>10.写出几种IE6 BUG的解决方法</h4>
+            <span>1.双边距BUG float引起的 使用display审判</span>
+            <span>2.3像素问题 使用float引起的 使用dislpay:inline -3px</span>
+            <span>3.超链接hover 点击后失效 使用正确的书写顺序 link visited hover active</span>
+            <span>4.Ie z-index问题 给父级添加position:relative</span>
+            <span>5.Png 透明 使用js代码 改</span>
+            <span>6.Min-height 最小高度 ！Important 解决’</span>
+            <span>7.select 在ie6下遮盖 使用iframe嵌套</span>
+            <span>8.为什么没有办法定义1px左右的宽度容器（IE6默认的行高造成的，使用over:hidden,zoom:0.08 line-height:1px）</span>
+        </div>
+    </article>
+</body>
+
+</html>

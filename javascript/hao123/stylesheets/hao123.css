@@ -1,0 +1,1281 @@
+body {
+    font: 14px/100% arial, "Hiragino Sans GB", "Hiragino Sans GB W3", \5b8b\4f53;
+}
+
+
+/*顶部工具栏*/
+
+.hao123-tools-wrap {
+    height: 61px;
+    width: 100%;
+    position: relative;
+    z-index: 120;
+}
+
+.hao123-tools-wrap .hao123-tools {
+    width: 1190px;
+    margin: 0 auto;
+    height: 60px;
+    font-size: 12px;
+    line-height: 22px;
+    clear: both;
+    position: relative;
+    z-index: 996;
+    font-family: 'Tahoma';
+}
+
+
+/*设首页*/
+
+.hao123-tools .sethome {
+    width: 25px;
+    position: absolute;
+    top: 0;
+    left: 168px;
+    line-height: 1.4;
+    margin-top: 13px;
+    margin-right: 22px;
+    padding: 2px 5px;
+    display: block;
+    float: left;
+    color: #fff;
+    z-index: 30;
+    text-align: center;
+    background: #07ac72;
+    border-radius: 2px;
+}
+
+
+/*logo*/
+
+.hao123-tools .hao123-logo {
+    position: relative;
+    float: left;
+    width: 168px;
+    height: 60px;
+    z-index: 20;
+    margin-right: 24px;
+}
+
+.hao123-logo .card {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.hao123-logo .card a {
+    color: #333;
+}
+
+
+/*hover,更换背景颜色*/
+
+.hover-bg:hover {
+    background-color: #f7f7f7;
+}
+
+
+/*行内元素改变显示方式*/
+
+.hao123-tools-wrap .g-ib {
+    display: inline-block;
+}
+
+
+/*天气、日历、星座*/
+
+.hao123-tools .hao123-col {
+    float: left;
+    height: 60px;
+    vertical-align: top;
+}
+
+
+/*天气*/
+
+.hao123-col .weather {
+    float: left;
+    height: 60px;
+    line-height: 60px;
+    margin-left: 13px;
+    cursor: pointer;
+    _margin-left: 12px;
+    _display: inline;
+}
+
+.weather .colweather-city {
+    display: inline-block;
+    padding-left: 9px;
+    height: 60px;
+    line-height: 60px;
+    padding-right: 10px;
+    color: #999;
+}
+
+.colweather-city .weathercity-arrow {
+    width: 9px;
+    height: 6px;
+    background: url('../img/index_widthlg.png') no-repeat -52px -97px;
+    _background: url('../img/index_widthlg.png') no-repeat -52px -95px;
+    margin-left: 4px;
+    vertical-align: middle;
+    _overflow: hidden;
+    _height: 9px;
+}
+
+.weather .colweather-info {
+    padding-right: 10px;
+    color: #999;
+    line-height: 60px;
+    height: 60px;
+    position: relative;
+}
+
+.colweather-info .weatherinfo-icon {
+    line-height: 60px;
+    vertical-align: middle;
+    width: 26px;
+    height: 60px;
+    background-position: 0 14px;
+    background-repeat: no-repeat;
+    background-image: url("http://s0.hao123img.com/res/weather/v1/a7.png");
+}
+
+.colweather-info .weatherinfo-txt {
+    margin-left: 4px;
+}
+
+.colweather-info .weahterinfo-temperature {
+    font-family: 'arial';
+    margin-left: 8px;
+}
+
+
+/*日历*/
+
+.hao123-col .calendar {
+    position: relative;
+    text-align: center;
+    float: left;
+    margin-left: 2px;
+    width: 153px;
+    height: 60px;
+}
+
+.calendar .calendarinfo {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.calendarinfo .cal-link {
+    color: #999;
+}
+
+.cal-link .calendarinfo-month {
+    font-family: 'arial';
+}
+
+.cal-link .calendarinfo-day {
+    padding-left: 10px;
+}
+
+
+/*星座*/
+
+.hao123-col .star {
+    position: relative;
+    text-align: center;
+    float: left;
+    _width: 80px;
+    margin-left: 2px;
+    height: 60px;
+}
+
+.star .star-link {
+    display: block;
+    height: 60px;
+    line-height: 60px;
+    line-height: 62px \9;
+    color: #999;
+    cursor: pointer;
+    padding: 0 5px;
+}
+
+
+/*天气、日历、星座结束*/
+
+
+/*链接*/
+
+.hao123-tools .hao123-links {
+    z-index: 100;
+    float: right;
+    height: 60px;
+    padding: 0 129px 0 0;
+}
+
+
+/*登录百度账号*/
+
+.hao123-links .loginlink {
+    float: left;
+    height: 100%;
+    position: relative;
+}
+
+.loginlink .login {
+    display: block;
+    position: relative;
+    padding: 0;
+    line-height: 60px;
+    padding-left: 33px;
+    padding-right: 9px;
+    color: #999;
+    background-image: url('../img/index_widthlg.png');
+    background-repeat: no-repeat;
+    background-position: -30px -110px;
+    _background-image: url('../img/icon_ie6.png');
+    _background-position: 12px 21px;
+    z-index: 11;
+}
+
+
+/*百度云盘*/
+
+.hao123-links .header-pan {
+    display: block;
+    float: left;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-pan .pan {
+    padding: 0 8px 0 6px;
+    line-height: 60px;
+    color: #999;
+    cursor: pointer;
+}
+
+
+/*邮箱*/
+
+.hao123-links .mail {
+    float: left;
+    height: 60px;
+}
+
+.mail .link {
+    display: block;
+    width: 32px;
+    height: 60px;
+    line-height: 60px;
+    padding: 0 0 0 8px;
+    text-align: left;
+    color: #999;
+}
+
+
+/*浏览器*/
+
+.hao123-links .header-browser {
+    display: block;
+    float: left;
+    height: 60px;
+    overflow: hidden;
+    position: relative;
+}
+
+.header-browser .browser {
+    padding: 0 5px 0 5px;
+    line-height: 60px;
+    color: #999;
+    cursor: pointer;
+    display: block;
+    width: 36px;
+    height: 60px;
+    text-align: center;
+}
+
+
+/*换肤*/
+
+.hao123-links .skin-btn {
+    display: block;
+    float: left;
+    height: 60px;
+    color: #999;
+}
+
+.skin-btn .skin-txt {
+    height: 60px;
+    line-height: 60px;
+    padding: 0 8px;
+    text-align: left;
+}
+
+
+/*链接结束*/
+
+
+/*笑话*/
+
+.hao123-tools .headjoke-box {
+    position: absolute;
+    right: 0;
+    width: 129px;
+    height: 60px;
+    line-height: 60px;
+    top: 0;
+    text-align: left;
+    overflow: hidden;
+    z-index: 16;
+}
+
+.headjoke-box .headjoke-link {
+    display: block;
+    width: 129px;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+    padding: 0 7px;
+    color: #0aa770;
+}
+
+.headjoke-link .smile {
+    position: absolute;
+    top: 23px;
+    left: 5px;
+    width: 15px;
+    height: 15px;
+    background: url(../img/new_index_icon.png) -96px -46px no-repeat;
+}
+
+.headjoke-link .headjoke-text {
+    overflow: hidden;
+    padding-left: 17px;
+    height: 60px;
+    line-height: 60px;
+    text-align: left;
+}
+
+
+/*笑话结束*/
+
+.hao123-tools-wrap .headerbg {
+    width: 100%;
+    height: 61px;
+    position: absolute;
+    background-color: #fcfcfc;
+    opacity: .2;
+    filter: alpha(Opacity=20);
+    left: 0;
+    top: 0;
+}
+
+.hao123-tools-wrap .headerbottom {
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-bottom: 1px solid #ccc;
+    opacity: .2;
+}
+
+
+/*顶部工具栏结束*/
+
+
+/*搜索框*/
+
+.hao123-search-panel-box {
+    height: 82px;
+}
+
+.hao123-search-panel-box .hao123-search-panel {
+    position: relative;
+    width: 1190px;
+    height: 55px;
+    margin: 0 auto;
+    padding: 27px 0 0 0;
+}
+
+.hao123-search-panel .hao123-search {
+    height: 46px;
+    padding: 0 0 0 166px;
+}
+
+.hao123-search .search {
+    width: 800px;
+}
+
+
+/*百度logo*/
+
+.search .search_logo {
+    float: left;
+    margin: 4px 30px 0 -26px;
+    width: 120px;
+    height: 40px;
+    position: relative;
+}
+
+.search_logo .link {
+    position: absolute;
+    left: 0;
+    z-index: 100;
+}
+
+.search_logo .link .color {
+    width: 120px;
+    height: 40px;
+    display: block;
+    background: url(../img/index_widthlg.png) -10px -212px no-repeat;
+}
+
+
+/*搜索表单*/
+
+.search .search_text {
+    display: inline-block;
+    width: 448px;
+    height: 18px;
+    border: 1px solid #666;
+    border-right: 0;
+    outline: none;
+    padding: 13px 30px 13px 60px;
+    font: 16px arial;
+    vertical-align: top;
+}
+
+.search .submit_btn {
+    display: inline-block;
+    width: 120px;
+    height: 46px;
+    border: 0;
+    outline: none;
+    vertical-align: top;
+    background: url(../img/index_widthlg.png) no-repeat -211px -180px;
+    cursor: pointer;
+}
+
+
+/*换肤功能*/
+
+.hao123-search-panel .change {
+    position: absolute;
+    right: 0px;
+    top: 30px;
+    width: 210px;
+    height: 38px;
+}
+
+.change span {
+    float: left;
+    display: block;
+    margin-right: 5px;
+    width: 38px;
+    height: 38px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.change span:first-child {
+    background-color: #373737;
+}
+
+.change span:nth-child(2) {
+    background-color: #553679;
+}
+
+.change span:nth-child(3) {
+    background-color: #235800;
+}
+
+.change span:nth-child(4) {
+    background-color: #004983;
+}
+
+.change span:nth-child(5) {
+    background-color: #fff;
+    margin: 0;
+}
+
+
+/*换肤功能结束*/
+
+
+/*搜索框结束*/
+
+
+/*热词*/
+
+.hotsearch-box {
+    width: 1000px;
+    margin: -9px auto -7px;
+}
+
+.hotsearch-box .hotsearch {
+    margin: 6px 0 26px 195px;
+    position: relative;
+    width: 658px;
+    height: 20px;
+    z-index: 103;
+}
+
+.hotsearch .search-list {
+    width: 658px;
+    height: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.search-list .title {
+    float: left;
+    margin-right: 6px;
+    font-size: 12px;
+    line-height: 20px;
+    color: #999;
+}
+
+.title .hotsearch-link {
+    color: #090;
+    padding-left: 15px;
+    padding-bottom: 1px;
+    background: url(../img/index_widthlg.png) -159px -260px no-repeat;
+    _background: url(../img/icon_ie6.png) -312px 0 no-repeat;
+}
+
+.search-list .text {
+    float: left;
+    margin-right: 20px;
+    font-size: 12px;
+    line-height: 20px;
+}
+
+.text .js-hotword {
+    color: #666;
+}
+
+.text .js-hotword:hover {
+    color: #f30 !important;
+    text-decoration: underline;
+}
+
+
+/*热词结束*/
+
+
+/*主体*/
+
+.main {
+    position: relative;
+}
+
+
+/*导航*/
+
+.main .menus {
+    width: 1190px;
+    height: 38px;
+    border: 0;
+    background-color: #fcfcfc;
+    margin: 0 auto;
+    margin-bottom: 10px;
+    font-size: 14px;
+    position: relative;
+    z-index: 3;
+}
+
+.menus ul {
+    margin: 0;
+    padding: 0;
+    width: 1190px;
+    height: 38px;
+    border: 0;
+    border-top: 2px solid #099e6a;
+    border-bottom: 1px solid #eaeaea;
+}
+
+.menus ul .menu {
+    height: 38px;
+    line-height: 38px;
+    width: 110px;
+    float: left;
+    text-align: center;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.menus ul .first {
+    width: 81px;
+}
+
+.menu .link {
+    border: 0;
+    display: block;
+    height: 100%;
+    text-align: center;
+    color: #333;
+    position: relative;
+    font-family: Microsoft Yahei;
+    font-size: 16px;
+}
+
+.menu .link:hover {
+    background: 0;
+}
+
+.menu .link:hover .title {
+    text-decoration: none;
+    color: #0aa770;
+}
+
+.menu .link.active:hover .title {
+    text-decoration: none;
+    color: #fff;
+}
+
+.menu .link.active {
+    background-color: #0aa770;
+    cursor: pointer;
+    color: #fff;
+}
+
+.link.active .menu-split {
+    display: none;
+}
+
+.link .menu-split {
+    display: block;
+    width: 1px;
+    height: 40px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url(../img/menus_split.png) center left no-repeat;
+}
+
+.last .link .menu-split {
+    display: none;
+}
+
+
+/*导航结束*/
+
+
+/*导航下面网站推荐*/
+
+.gosite_top {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-top: -10px;
+    overflow: hidden;
+}
+
+.gosite_top .topsite_inner {
+    width: 1188px;
+    height: 36px;
+    border: solid 1px #84d7ba;
+    line-height: 36px;
+    margin: 0 auto;
+    font-size: 14px;
+    color: #666;
+    background: #fff;
+    position: relative;
+    overflow: hidden;
+    z-index: 2;
+}
+
+.topsite_inner .title {
+    display: block;
+    float: left;
+    width: 80px;
+    height: 36px;
+    text-align: center;
+    color: #0aa770;
+}
+
+.topsite_inner .title-line {
+    display: block;
+    float: left;
+    height: 20px;
+    width: 1px;
+    background-color: #eaeaea;
+    position: relative;
+    top: 9px;
+    margin-right: 36px;
+}
+
+.topsite_inner .govsite-item {
+    float: left;
+    height: 36px;
+    line-height: 36px;
+    margin-right: 36px;
+}
+
+.govsite-item .govsite-link {
+    display: block;
+    height: 36px;
+    line-height: 36px;
+    color: #333;
+    text-decoration: none;
+}
+
+.govsite-item .govsite-link:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+
+/*导航下面网站推荐结束*/
+
+.url {
+    width: 1190px;
+    clear: both;
+    margin: 0 auto;
+}
+
+
+/*右边网址*/
+
+.layout-right-main {
+    width: 900px;
+    float: right;
+}
+
+.layout-right-main .right-inner {
+    width: 898px;
+    position: relative;
+    border: 1px solid #84d7ba;
+    background-color: #fcfcfc;
+}
+
+.right-inner .box-site {
+    position: relative;
+}
+
+.box-site .site-bd {
+    width: 868px;
+    height: 134px;
+    padding-left: 23px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    position: relative;
+}
+
+.site-bd .site-item-normal {
+    float: left;
+    width: 130px;
+    padding-top: 6px;
+    padding-bottom: 4px;
+    margin-right: 4px;
+    padding-left: 9px;
+    color: #000;
+    font-size: 14px;
+    height: 20px;
+    line-height: 20px;
+    vertical-align: top;
+}
+
+.site-item-normal a {
+    position: relative;
+    color: #333;
+    outline: 0;
+    text-decoration: none;
+    background-image: url(../img/6000.png);
+    background-position: 2px 44%;
+    background-position: 2px 40%\9;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    display: inline-block;
+}
+
+.site-item-normal a:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+.site-item-normal .sitesublink {
+    background: 0;
+    padding-left: 0;
+    padding-right: 5px;
+    _padding-right: 0;
+    position: relative;
+    z-index: 88;
+    display: inline-block;
+}
+
+.site-item-normal .tips_link {
+    padding: 0;
+    margin: 0;
+    width: 0;
+    background-image: none;
+    text-decoration: none;
+    _padding-left: 5px;
+}
+
+.site-item-normal .tips_link:hover {
+    text-decoration: none;
+    color: #ff3c00;
+}
+
+.tips_link .g_icon {
+    left: 0;
+    margin-left: 2px;
+    background-position: 0 0;
+    padding-left: 7px;
+    background-image: url(../img/bubble.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    top: -7px;
+    font-size: 12px;
+    overflow: hidden;
+    word-wrap: break-word;
+    padding-top: 2px;
+    padding-right: 2px;
+    line-height: 13px;
+    _line-height: 14px;
+    vertical-align: top;
+    color: #ff3c00;
+    text-decoration: none;
+}
+
+.box-site .link-banner {
+    top: 98px;
+    width: 875px;
+    padding-left: 23px;
+    height: 35px;
+    position: absolute;
+    left: 0;
+    background-color: #f9f9f9;
+    border-top: 1px solid #e9e9e9;
+}
+
+.link-banner li {
+    width: 126px;
+    padding-left: 13px;
+    margin-right: 4px;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+}
+
+.link-banner li a {
+    display: block;
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+    cursor: pointer;
+}
+
+.link-banner li a:hover {
+    text-decoration: underline;
+    color: #F50;
+}
+
+.link-banner li i {
+    width: 15px;
+    height: 35px;
+    margin-right: 2px;
+    display: block;
+    float: left;
+    cursor: pointer;
+}
+
+.right-inner .box-famoussite {
+    clear: both;
+    position: relative;
+    z-index: 1;
+}
+
+.box-famoussite .wf-inner {
+    margin-left: 30px;
+    padding-bottom: 4px;
+    _padding-bottom: 0;
+    padding-top: 4px;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.wf-inner span {
+    width: 143px;
+    vertical-align: top;
+    position: relative;
+    display: inline-block;
+    height: 30px;
+    line-height: 30px;
+}
+
+.wf-inner span a {
+    padding: 1px 4px;
+    zoom: 1;
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.wf-inner span a:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+.wf-inner span .tips_link {
+    position: relative;
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+    width: 0;
+    margin-left: -3px;
+    text-decoration: none;
+}
+
+.g_tips-r .g_icon {
+    top: 0;
+    text-decoration: none;
+    left: 0;
+    margin-left: 2px;
+    background-position: 0 0;
+    padding-left: 7px;
+    background-image: url(../img/bubble.png);
+    background-repeat: no-repeat;
+    position: absolute;
+    width: 34px;
+    height: 28px;
+    top: -7px;
+    font-size: 12px;
+    overflow: hidden;
+    word-wrap: break-word;
+    padding-top: 2px;
+    padding-right: 2px;
+    line-height: 13px;
+    _line-height: 14px;
+    vertical-align: top;
+    color: #ff3c00;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.wf-inner span a.g_red,
+.wf-inner span a.tc-orange {
+    color: #f50;
+    text-decoration: none;
+}
+
+.wf-inner span a.g_red:hover,
+.wf-inner span a.tc-orange:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+.wf-inner span a.tc-green {
+    color: #0aa770;
+    text-decoration: none;
+}
+
+.wf-inner span a.tc-green:hover {
+    color: #0aa770;
+    text-decoration: underline;
+}
+
+.box-famoussite .wf-tuijian {
+    margin-left: 30px;
+    display: inline-block;
+    border-bottom: 1px solid #f9f9f9;
+}
+
+.wf-tuijian .tuijian-icon {
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    bottom: 9px;
+    width: 22px;
+    height: 22px;
+    background: url(../img/new_index_icon.png) no-repeat -24px -42px;
+    z-index: 20;
+    cursor: pointer;
+}
+
+.wf-tuijian span {
+    display: inline-block;
+    width: 143px;
+    vertical-align: top;
+    position: relative;
+    height: 34px;
+    line-height: 30px;
+}
+
+.wf-tuijian span a {
+    padding: 1px 4px;
+    zoom: 1;
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.wf-tuijian span a:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+
+/*右边网址结束*/
+
+
+/*左边网址*/
+
+.layout-left-side {
+    width: 280px;
+    position: relative;
+    z-index: 99;
+}
+
+.layout-left-side .servicetab {
+    width: 278px;
+    border-bottom: 0;
+    background-color: #fcfcfc;
+    border: 1px solid #cecece;
+}
+
+.servicetab .starbar {
+    position: relative;
+    padding: 9px 0 0 18px;
+}
+
+.starbar ul {
+    height: 165px;
+}
+
+.starbar .startbar-list {
+    position: relative;
+    float: left;
+    margin-bottom: 6px;
+}
+
+.starbar .tips {
+    float: left;
+    width: 278px;
+    height: 33px;
+    position: relative;
+    margin-top: -8px;
+    margin-left: -18px;
+}
+
+.tips .tips-arrow {
+    position: absolute;
+    top: 0;
+    left: 50px;
+    width: 0;
+    height: 0;
+    border: solid transparent;
+    _border-color: transparent transparent #f7f7f5 transparent;
+    _border-style: dashed dashed solid dashed;
+    border-width: 5px;
+    border-bottom-color: #f7f7f5;
+    z-index: 20;
+}
+
+.tips .tips-arrowOut {
+    top: -3px;
+    border-width: 6px;
+    border-bottom-color: #d9d9d9;
+}
+
+.tips .tvtip {
+    width: 278px;
+    height: 24px;
+    background-color: #f7f7f5;
+    border-top: 1px solid #d9d9d9;
+    position: absolute;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    top: 8px;
+    left: 0;
+    z-index: 10;
+}
+
+.startbar-list .baritem {
+    width: 128px;
+}
+
+.baritem .category {
+    padding-left: 25px;
+    position: relative;
+    padding-top: 6px;
+}
+
+.category .star-icon {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: url(../img/index_menus_widthlg.png) no-repeat;
+    display: block;
+    top: 4px;
+    left: 0;
+}
+
+.category a {
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.category a:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+.category .split {
+    padding: 0 5px;
+    color: #999;
+    position: relative;
+    top: -1px;
+}
+
+.star-icon.i-tv {
+    background-position: -20px -81px;
+}
+
+.star-icon.i-game {
+    background-position: -19px -301px;
+}
+
+.star-icon.i-movie {
+    background-position: -20px -160px;
+}
+
+.star-icon.i-comic {
+    background-position: -20px -381px;
+}
+
+.star-icon.i-toutiao {
+    background-position: -20px -100px;
+}
+
+.star-icon.i-travel {
+    background-position: -20px -261px;
+}
+
+.starbar .tvtip .tvtip-txtkey {
+    margin: 0 6px 0 12px;
+    display: inline-block;
+    vertical-align: middle;
+    zoom: 1;
+    text-decoration: none;
+}
+
+.starbar .tvtip .tvtip-txtlink {
+    font-size: 12px;
+    line-height: 2;
+    color: #ff5601;
+    text-decoration: none;
+}
+
+.starbar .tvtip .tip-closed {
+    background: url(../img/new_index_icon.png) -28px -24px no-repeat;
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    right: 10px;
+    top: 6px;
+    display: inline-block;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.star-icon.i-caipiao {
+    background-position: -20px -21px;
+}
+
+.star-icon.i-gaoxiao {
+    background-position: -20px -121px;
+}
+
+.star-icon.i-tuan {
+    background-position: -20px -281px;
+}
+
+.star-icon.i-music {
+    background-position: -20px -362px;
+}
+
+.box-startools {
+    position: relative;
+    border-top: 1px solid #ebebeb;
+    padding-top: 10px;
+}
+
+.startools-icon {
+    display: block;
+    width: 20px;
+    height: 20px;
+    float: left;
+    background: red;
+    margin-top: -3px;
+    margin-left: 18px;
+    background: url(../img/index_menus_widthlg.png) no-repeat;
+    _display: inline;
+    _zoom: 1;
+}
+
+.i-life {
+    background-position: -20px -221px;
+}
+
+.startools-arrow {
+    display: block;
+    float: right;
+    width: 14px;
+    height: 14px;
+    background: url(../img/new_index_icon.png) no-repeat -64px -22px;
+    cursor: pointer;
+    margin-right: 13px;
+    _position: absolute;
+    _right: 0;
+}
+
+.startools-container {
+    width: 203px;
+    height: 52px;
+    overflow: hidden;
+    margin-left: 44px;
+}
+
+.startools-list {
+    margin-right: -24px;
+}
+
+.startools-link {
+    width: 44px;
+    overflow: hidden;
+    text-align: left;
+    font-size: 12px;
+    text-align: left;
+    color: #666;
+    white-space: nowrap;
+    margin-bottom: 11px;
+    color: #333;
+    text-decoration: none;
+    outline: 0;
+}
+
+.startools-link:hover {
+    color: #f50;
+    text-decoration: underline;
+}
+
+.startools-list .g-ib {
+    display: inline-block;
+}
+
+
+/*左边网址结束*/
+
+
+/*主体结束*/

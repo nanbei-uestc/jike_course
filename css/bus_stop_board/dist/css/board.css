@@ -1,0 +1,177 @@
+header,
+article,
+section,
+footer,
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box; }
+
+body {
+  background-color: #e4dcdc; }
+
+.container {
+  position: relative;
+  margin: 50px auto;
+  width: 700px;
+  height: 350px;
+  background-color: #fff; }
+  .container .board {
+    width: 700px;
+    height: 350px;
+    background-color: #fff; }
+    .container .board .top {
+      position: relative;
+      width: 700px;
+      height: 133px;
+      background-color: #fff; }
+      .container .board .top > div:nth-child(1) > div:nth-child(1) {
+        float: left;
+        margin: 19.95px 98px 0 0;
+        background-color: #ff0033;
+        width: 126px;
+        height: 53.2px;
+        line-height: 53.2px;
+        font-size: 42px;
+        color: #fcfcfc;
+        text-align: center; }
+      .container .board .top > div:nth-child(1) > div:nth-child(2) {
+        float: left;
+        margin: 23.94px 0 0 0; }
+        .container .board .top > div:nth-child(1) > div:nth-child(2) > div > div {
+          float: left;
+          color: #009933;
+          text-align: center; }
+          .container .board .top > div:nth-child(1) > div:nth-child(2) > div > div p:nth-child(1) {
+            font-size: 35px;
+            line-height: 35px; }
+          .container .board .top > div:nth-child(1) > div:nth-child(2) > div > div p:nth-child(2) {
+            font-size: 17.5px;
+            line-height: 17.5px; }
+        .container .board .top > div:nth-child(1) > div:nth-child(2) > div > p {
+          float: left;
+          margin: 0 56px 0 56px;
+          color: #009933;
+          font-size: 42px;
+          line-height: 42px;
+          text-align: center; }
+        .container .board .top > div:nth-child(1) > div:nth-child(2) > div:after {
+          clear: both;
+          content: '.';
+          display: block;
+          width: 0;
+          height: 0;
+          visibility: hidden; }
+        .container .board .top > div:nth-child(1) > div:nth-child(2) > span {
+          display: block;
+          margin: 14px 0 0 56px;
+          color: #a41717;
+          font-size: 21px;
+          line-height: 21px; }
+      .container .board .top > div:nth-child(2) {
+        position: absolute;
+        left: 26.6px;
+        bottom: 2.66px;
+        color: #434343;
+        font-size: 14px; }
+    .container .board .bottom {
+      position: relative;
+      width: 700px;
+      height: 217px;
+      background-color: #177505; }
+      .container .board .bottom ul.bus_stop {
+        position: relative;
+        margin: 0 21px 0 21px;
+        width: 658px;
+        height: 164.92px;
+        color: #fcfcfc; }
+        .container .board .bottom ul.bus_stop li {
+          float: left;
+          padding: 6.51px 4.34px;
+          width: 31.33333px;
+          height: 164.92px;
+          font-size: 17.5px;
+          line-height: 17.5px;
+          text-align: center; }
+          .container .board .bottom ul.bus_stop li span {
+            line-height: 17.5px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(1) span:nth-child(2) {
+          line-height: 99.4px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(2) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(3) span:nth-child(2) {
+          line-height: 24.85px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(4) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(5) span:nth-child(2) {
+          line-height: 99.4px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(6) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(7) span:nth-child(2) {
+          line-height: 99.4px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(8) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(9) span:nth-child(2) {
+          line-height: 24.85px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(10) span:nth-child(2) {
+          line-height: 99.4px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(11) span:nth-child(2) {
+          line-height: 99.4px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(12) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(13) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(14) span:nth-child(2) {
+          line-height: 24.85px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(15) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(16) span:nth-child(2) {
+          line-height: 24.85px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(17) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(18) span:nth-child(2) {
+          line-height: 99.4px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(19) span:nth-child(2) {
+          line-height: 33.13333px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(20) span:nth-child(2) {
+          line-height: 49.7px; }
+        .container .board .bottom ul.bus_stop > li:nth-child(21) span:nth-child(2) {
+          line-height: 99.4px; }
+      .container .board .bottom .arrow_div {
+        position: relative;
+        width: 700px;
+        height: 52.08px;
+        background-color: #fff; }
+        .container .board .bottom .arrow_div > p {
+          margin: 0 124.53px 0 85.47px;
+          width: 490px;
+          color: #434343;
+          font-size: 14px;
+          text-align: center; }
+        .container .board .bottom .arrow_div .arrow {
+          position: relative;
+          margin: 0 89.53px 0 50.47px;
+          width: 560px;
+          height: 8.68px;
+          background-color: #ff0033; }
+          .container .board .bottom .arrow_div .arrow:after {
+            content: '';
+            display: block;
+            width: 0;
+            height: 0;
+            position: absolute;
+            right: -39.06px;
+            bottom: 0;
+            border-top: 10.85px solid transparent;
+            border-left: 47.74px solid #ff0033;
+            border-bottom: 10.85px solid #ff0033;
+            border-right: 47.74px solid transparent; }

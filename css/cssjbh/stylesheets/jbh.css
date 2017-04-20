@@ -1,0 +1,309 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+/*整个车身*/
+
+.whole {
+    position: relative;
+    margin: 200px auto 0px auto;
+    width: 430px;
+    height: 270px;
+}
+
+
+/*汽车上部*/
+
+.top {
+    position: absolute;
+    top: 0;
+    left: 140px;
+    width: 200px;
+    height: 100px;
+    border: 10px solid black;
+    border-bottom: 0;
+    border-radius: 200px 200px 0 0;
+    z-index: 2;
+    background-color: white;
+}
+
+
+/*前车窗*/
+
+.top:before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    left: 15px;
+    width: 70px;
+    height: 70px;
+    border: 5px solid black;
+    border-radius: 70px 0 0 0;
+}
+
+
+/*后车窗*/
+
+.top:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 15px;
+    width: 70px;
+    height: 70px;
+    border: 5px solid black;
+    border-radius: 0 70px 0 0;
+}
+
+
+/*汽车中部*/
+
+.middle {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 350px;
+    height: 100px;
+    border: 10px solid black;
+    border-top-left-radius: 230px 290px;
+    border-top-right-radius: 200px 300px;
+    z-index: 1;
+    background-color: white;
+}
+
+
+/*车灯*/
+
+.middle_headlight {
+    position: absolute;
+    top: 40px;
+    left: -7px;
+    width: 10px;
+    height: 20px;
+    border: 4px solid black;
+    border-radius: 50% 40%;
+    background-color: white;
+}
+
+.middle_front {
+    position: absolute;
+    top: 66px;
+    left: -22px;
+    width: 30px;
+    height: 36px;
+    border: 4px solid black;
+    border-top-left-radius: 24px 30px;
+    border-bottom-left-radius: 24px 30px;
+    background-color: white;
+}
+
+
+/*前门把手*/
+
+.handle_front {
+    position: absolute;
+    top: 5px;
+    left: 145px;
+    width: 24px;
+    height: 6px;
+    border: 4px solid black;
+    border-radius: 8px;
+}
+
+
+/*后门把手*/
+
+.handle_back {
+    position: absolute;
+    top: 5px;
+    left: 236px;
+    width: 24px;
+    height: 6px;
+    border: 4px solid black;
+    border-radius: 8px;
+}
+
+.middle_back {
+    position: absolute;
+    top: 62px;
+    left: 340px;
+    width: 20px;
+    height: 40px;
+    border: 4px solid black;
+    background-color: white;
+    border-radius: 10px;
+}
+
+
+/*前车轮*/
+
+.wheel_front {
+    position: absolute;
+    top: 160px;
+    left: 120px;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
+}
+
+
+/*后车轮*/
+
+.wheel_back {
+    position: absolute;
+    top: 160px;
+    left: 260px;
+    width: 100px;
+    height: 100px;
+    border: 5px solid black;
+    border-radius: 50%;
+    background-color: white;
+    z-index: 2;
+}
+
+
+/*车轴*/
+
+.axle1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2px;
+    margin-left: -50px;
+    width: 100px;
+    height: 4px;
+    border: 0;
+    background-color: black;
+    z-index: 3;
+}
+
+.axle2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2px;
+    margin-left: -50px;
+    width: 100px;
+    height: 4px;
+    border: 0;
+    background-color: black;
+    z-index: 3;
+    transform: rotate(45deg);
+}
+
+.axle3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2px;
+    margin-left: -50px;
+    width: 100px;
+    height: 4px;
+    border: 0;
+    background-color: black;
+    z-index: 3;
+    transform: rotate(90deg);
+}
+
+.axle4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -2px;
+    margin-left: -50px;
+    width: 100px;
+    height: 4px;
+    border: 0;
+    background-color: black;
+    z-index: 3;
+    transform: rotate(135deg);
+}
+
+
+/*车轴动画*/
+
+.axle1 {
+    animation: rotating_one 2s linear infinite;
+}
+
+.axle2 {
+    animation: rotating_two 2s linear infinite;
+}
+
+.axle3 {
+    animation: rotating_three 2s linear infinite;
+}
+
+.axle4 {
+    animation: rotating_four 2s linear infinite;
+}
+
+@keyframes rotating_one {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+@keyframes rotating_two {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(-315deg);
+    }
+}
+
+@keyframes rotating_three {
+    from {
+        transform: rotate(90deg);
+    }
+    to {
+        transform: rotate(-270deg);
+    }
+}
+
+@keyframes rotating_four {
+    from {
+        transform: rotate(135deg);
+    }
+    to {
+        transform: rotate(-225deg);
+    }
+}
+
+
+/*车轮中心圆*/
+
+.wheel_center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left: -15px;
+    margin-top: -15px;
+    border: 0;
+    width: 30px;
+    height: 30px;
+    border-radius: 50% 50%;
+    background-color: black;
+}
+
+
+/*道路*/
+
+.road {
+    width: 100%;
+    height: 20px;
+    border: 0;
+    background-color: black;
+}

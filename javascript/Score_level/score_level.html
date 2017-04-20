@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>分数等级</title>
+    <link rel="stylesheet" type="text/css" href="./stylesheets/neat.css">
+    <link rel="stylesheet" type="text/css" href="./stylesheets/score_level.css">
+</head>
+
+<body>
+    <!--计算分数等级-->
+    <div class="container">
+        <form onsubmit="return score_level()">
+            <input type="text" class="text" name="x" id="user_score" placeholder="请输入0-100之间的数字" autocomplete="off"
+            ><input type="submit" class="submit" name="submit" value="计算分数等级">
+        </form>
+        <span id="result"></span>
+    </div>
+    <!--计算分数等级结束-->
+    <script type="text/javascript" src="./js/score_level.js"></script>
+</body>
+
+</html>

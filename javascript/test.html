@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>test js</title>
+</head>
+
+<body>
+    <script type="text/javascript">
+    function f1(callback) {
+
+        return callback();
+    }
+
+    function f2() {
+
+        document.write("我时回调");
+
+    }
+    f1(f2);
+    document.write("woshi");
+    </script>
+</body>
+
+</html>

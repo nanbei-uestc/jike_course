@@ -1,0 +1,650 @@
+html {
+    /*当想要设置高度百分比时，一定要设置html和body的高度*/
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    /*当想要设置高度百分比时，一定要设置html和body的高度*/
+    height: 100%;
+    font-family: arial;
+    /*使ie6支持hover*/
+    behavior: url("../js/csshover3.htc");
+}
+
+
+/*html5*/
+
+article,
+aside,
+dialog,
+footer,
+header,
+section,
+footer,
+nav,
+figure,
+menu {
+    display: block;
+}
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    min-width: 810px;
+    min-height: 600px;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 12px;
+    z-index: 2;
+}
+
+nav ul {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 0;
+    width: 486px;
+    height: 45px;
+    border: 0;
+}
+
+
+/*给导航列表设置样式*/
+
+.item,
+.item_login,
+.item_setting {
+    list-style: none;
+    float: left;
+    margin-top: 24px;
+    margin-left: 20px;
+    margin-right: 2px;
+    height: 22px;
+    line-height: 22px;
+    /*forIE*/
+    display: inline;
+    overflow: hidden;
+    border: 0;
+}
+
+
+/*鼠标经过时导航列表字体颜色改变*/
+
+.item:hover>a {
+    color: #3385ff;
+}
+
+.item_login:hover>a {
+    color: #3385ff;
+}
+
+.item_setting:hover>a {
+    color: #3385ff;
+}
+
+
+/*给导航列表中的a标签设置字体颜色和加粗*/
+
+.item>a {
+    font-weight: bold;
+    color: #333;
+}
+
+.item_login>a,
+.item_setting>a {
+    color: #666;
+}
+
+
+/*鼠标悬停在‘设置’菜单时显示二级菜单*/
+
+.item_setting:hover .item_setting_menu {
+    display: block;
+}
+
+
+/*‘设置’的二级菜单的样式*/
+
+.item_setting_menu {
+    position: absolute;
+    display: none;
+    top: 40px;
+    right: 68px;
+    width: 70px;
+    height: 102px;
+}
+
+
+/*‘设置’的二级菜单中导航小三角形的创建和样式设置*/
+
+.triangle {
+    position: relative;
+    margin: 0 auto;
+    width: 0;
+    height: 0;
+    /*IE6*/
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-width: 6px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent #d1d1d1 transparent;
+}
+
+.ie_inner_triangle {
+    position: absolute;
+    top: 1px;
+    right: 29px;
+    width: 0;
+    height: 0;
+    z-index: 3;
+    /*IE6*/
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    border-width: 6px;
+    border-style: dashed dashed solid dashed;
+    border-color: transparent transparent white transparent;
+}
+
+
+/*‘设置’的二级菜单放置a标签的容器样式*/
+
+.setting_menu_container {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    border: 1px solid #d1d1d1;
+    box-shadow: 1px 0px 1px #ccc;
+    /*forIE*/
+    behavior: url(../js/ie-css3.htc);
+}
+
+
+/*‘设置’的二级菜单中a标签的样式*/
+
+.setting_menu_container a {
+    position: relative;
+    display: block;
+    margin: 0;
+    padding: 0;
+    width: 69px;
+    height: 24px;
+    line-height: 24px;
+    text-decoration: none;
+}
+
+
+/*鼠标悬停在‘设置’的二级菜单中的a标签上时的样式*/
+
+.setting_menu_container a:hover {
+    background-color: #3385ff;
+    color: white;
+    /*显示a标签在小三角形之上*/
+    z-index: 4;
+}
+
+
+/*‘更多产品’导航项的样式*/
+
+.item_more {
+    float: left;
+    width: 82px;
+    height: 22px;
+    margin-top: 24px;
+    margin-left: 8px;
+    list-style: none;
+    text-align: center;
+    line-height: 22px;
+    /*forIE*/
+    display: inline;
+    overflow: hidden;
+    border: 0;
+}
+
+
+/*‘更多产品’导航项中a标签的样式*/
+
+.item_more>a {
+    color: white;
+    text-decoration: none;
+    background-color: #3385ff;
+    padding: 4px 6px 4px 6px;
+}
+
+
+/*为了使鼠标悬停在‘更多产品’上时显示为占满屏幕的一列，创建了顶部变幻颜色的span*/
+
+.holder_bgcolor {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 82px;
+    height: 24px;
+}
+
+
+/*为了使鼠标悬停在‘更多产品’上时显示为占满屏幕的一列，创建了width为1的显示边框的span*/
+
+.add_border {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 82px;
+    width: 1px;
+    min-height: 712px;
+}
+
+
+/*‘更多产品’二级菜单外部包裹层的样式*/
+
+.products_wrapper {
+    display: none;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    width: 82px;
+    min-height: 667px;
+}
+
+
+/*‘更多产品’二级菜单列表（ul）的样式*/
+
+.more_products {
+    position: absolute;
+    right: 0;
+    width: 82px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+}
+
+
+/*鼠标悬停在‘更多产品’上时，所有的样式设置*/
+
+.item_more:hover .holder_bgcolor {
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.item_more:hover .add_border {
+    display: block;
+    background-color: #f0f0f0;
+}
+
+.item_more:hover .products_wrapper {
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.item_more:hover .more_products {
+    display: block;
+    background-color: #f9f9f9;
+}
+
+.item_more:hover {
+    background-color: #f9f9f9;
+    color: #666;
+}
+
+.item_more:hover>a {
+    background-color: #f9f9f9;
+    color: #666;
+}
+
+
+/*‘更多产品’二级菜单列表项的样式*/
+
+.more_products li {
+    width: 66px;
+    height: 76px;
+    text-align: center;
+    margin: 0 auto;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+
+/*‘更多产品’二级菜单列表项中a标签的样式*/
+
+.more_products a {
+    text-decoration: none;
+}
+
+
+/*鼠标悬停在‘更多产品’二级菜单列表项中a标签时加下划线样式*/
+
+.more_products a:hover {
+    text-decoration: underline;
+}
+
+.more_first {
+    border-top: 1px solid #f0f0f0;
+}
+
+
+/*‘更多产品’二级菜单最后一项的样式设置和样式重写*/
+
+.more_more {
+    line-height: 76px;
+}
+
+.more_more>a {
+    text-decoration: underline;
+}
+
+.more_more>a:hover {
+    text-decoration: underline;
+}
+
+
+/*‘更多产品’二级菜单文字和图片样式设置*/
+
+.more_products span {
+    display: block;
+    text-align: center;
+    margin: 10px auto 5px;
+}
+
+.products_music {
+    width: 40px;
+    height: 36px;
+    background: url("../images/more_products.png");
+    background-repeat: no-repeat;
+    background-position: -72px 0;
+}
+
+.products_img {
+    width: 36px;
+    height: 36px;
+    background: url("../images/more_products.png");
+    background-repeat: no-repeat;
+    background-position: -112px 0;
+}
+
+.products_zhidao {
+    width: 36px;
+    height: 36px;
+    background: url("../images/more_products.png");
+    background-repeat: no-repeat;
+    background-position: -36px 0;
+}
+
+.products_wenku {
+    width: 36px;
+    height: 36px;
+    background: url("../images/more_products.png");
+    background-repeat: no-repeat;
+    background-position: -148px 0;
+}
+
+.products_top {
+    width: 36px;
+    height: 36px;
+    background: url("../images/more_products.png");
+    background-repeat: no-repeat;
+    background-position: -184px 0;
+}
+
+.products_tui {
+    width: 36px;
+    height: 36px;
+    background: url("../images/more_products.png");
+    background-repeat: no-repeat;
+    background-position: -220px 0;
+}
+
+article {
+    position: relative;
+    text-align: center;
+    top: 18%;
+    width: 100%;
+    z-index: 0;
+}
+
+.logo {
+    padding-bottom: 25px;
+}
+
+article form {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+/*form中输入框（span）的样式设置*/
+
+.text_fields {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    vertical-align: top;
+    width: 539px;
+    height: 34px;
+    border-top: 1px solid gray;
+    border-bottom: 1px solid gray;
+    border-left: 1px solid gray;
+    border-right: 0;
+    text-align: left;
+}
+
+.text_fields input {
+    display: block;
+    margin: 6px 0px 0px 7px;
+    border: 0px;
+    width: 500px;
+    height: 22px;
+    font-size: 15px;
+    outline: none;
+}
+
+
+/*输入框中小相册图标*/
+
+.cam_picture {
+    position: absolute;
+    display: block;
+    top: 8px;
+    right: 10px;
+    margin: 0;
+    padding: 0;
+    width: 18px;
+    height: 19px;
+    background: url("../images/camera.png");
+    background-repeat: no-repeat;
+    background-position: 0 0;
+}
+
+
+/*鼠标悬停在小相册图标上时改变背景图片显示的位置*/
+
+.cam_picture:hover {
+    background-position: 0 -20px;
+}
+
+
+/*搜索提交按钮（span）样式设置*/
+
+.search {
+    display: inline-block;
+    vertical-align: top;
+    margin: 0;
+}
+
+.search input {
+    display: block;
+    width: 100px;
+    height: 36px;
+    border: 1px solid #3385ff;
+    background-color: #3385ff;
+    font-size: 15px;
+    color: white;
+}
+
+
+/*鼠标悬停在提交上时显示阴影，改变背景颜色*/
+
+.search input:hover {
+    background-color: #317ef3;
+    box-shadow: 1px 1px 1px #ccc;
+    /*forIE*/
+    behavior: url(../js/ie-css3.htc);
+}
+
+
+/*footer分为两部分，ad和copyright两个div设置为inline-block ,使其在一行中显示*/
+
+footer {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    margin-left: -330px;
+    width: 660px;
+    height: 80px;
+    text-align: center;
+    font-size: 12px;
+    z-index: 1;
+}
+
+
+/*二维码推广样式设置*/
+
+
+/*ad中有两个class为ad_img的div，使其float为left，显示在同一行里*/
+
+.ad {
+    float: left;
+    width: 300px;
+    height: 80px;
+    /*forIE*/
+    display: inline;
+    overflow: hidden;
+    border: 0;
+}
+
+.ad_img {
+    float: left;
+    margin-right: 25px;
+    /*forIE*/
+    display: inline;
+    overflow: hidden;
+    border: 0;
+}
+
+
+/*ad_img中有两个class分别为ad_img_qrcode和ad_img_text的div，分别显示二维码图片和文字，
+
+*使其float为left，显示在同一行*/
+
+.ad_img_qrcode {
+    float: left;
+    margin-right: 10px;
+    /*forIE*/
+    display: inline;
+    overflow: hidden;
+    border: 0;
+}
+
+.ad_img_text {
+    float: left;
+    /*forIE*/
+    display: inline;
+    overflow: hidden;
+    border: 0;
+}
+
+
+/*二维码说明文字上面一行（p标签）*/
+
+.ad_img_text_title {
+    color: #666;
+    font-weight: bold;
+}
+
+
+/*二维码说明文字下面一行（p标签）*/
+
+.ad_img_text_title+p {
+    color: #666;
+}
+
+
+/*版权信息样式设置*/
+
+.copyright {
+    float: left;
+    width: 360px;
+    height: 80px;
+    /*forIE*/
+    display: inline;
+    overflow: hidden;
+    border: 0;
+}
+
+.copyright p,
+a {
+    color: #666;
+}
+
+.copyright p {
+    margin-left: 15px;
+    text-align: left;
+    padding: 0;
+}
+
+.firstline {
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+
+.secondline {
+    margin-top: 0;
+    margin-bottom: 7px;
+}
+
+.thirdline {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.copyright_click {
+    margin-right: 64px;
+}
+
+
+/*两个小图标的显示*/
+
+.icon_info {
+    position: relative;
+    top: 3px;
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    background: url("../images/icons.png") no-repeat;
+    background-position: -600px -96px;
+}
+
+.icon_police {
+    position: relative;
+    top: 3px;
+    margin-right: 6px;
+    width: 14px;
+    height: 17px;
+    display: inline-block;
+    background: url("../images/icons.png") no-repeat;
+    background-position: -623px -96px;
+}

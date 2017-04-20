@@ -1,0 +1,243 @@
+/*基本样式*/
+
+header,
+article,
+section,
+footer,
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    background-color: #f2f2f2;
+}
+
+
+/*字体引入*/
+
+@font-face {
+    font-family: NotoSansHans;
+    src: url("../fonts/NotoSansHans-Regular.otf");
+}
+
+
+/*基本样式结束*/
+
+
+/*外部容器*/
+
+.container {
+    position: relative;
+    margin: 50px auto 0;
+    background-color: #202020;
+    width: 442px;
+    height: 688px;
+    font-family: NotoSansHans;
+}
+
+
+/*结果区域*/
+
+.result_board {
+    position: relative;
+    width: 442px;
+    height: 280px;
+    text-align: right;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+
+/*显示过程*/
+
+.result_board>div:first-child {
+    padding-right: 30px;
+    width: 442px;
+    height: 140px;
+    line-height: 140px;
+    font-size: 28px;
+}
+
+
+/*显示结果*/
+
+.result_board>div:nth-child(2) {
+    padding-right: 30px;
+    width: 442px;
+    height: 140px;
+    line-height: 140px;
+}
+
+
+/*高级功能切换按钮*/
+
+.result_board>span {
+    position: absolute;
+    display: block;
+    opacity: 0.5;
+    bottom: 10px;
+    left: 26px;
+    width: 60px;
+    height: 36px;
+    line-height: 36px;
+    font-size: 20px;
+    text-align: center;
+    cursor: pointer;
+    background-color: #373737;
+}
+
+
+/*结果区域结束*/
+
+
+/*输入区域*/
+
+.input_board {
+    position: relative;
+    width: 442px;
+    height: 408px;
+    font-size: 30px;
+    /*font-weight: bold;*/
+    color: #fff;
+}
+
+
+/*输入区域每个按钮的基本样式*/
+
+.input_board>span {
+    float: left;
+    display: block;
+    background-color: #373737;
+    width: 109px;
+    height: 80px;
+    line-height: 80px;
+    text-align: center;
+    cursor: pointer;
+}
+
+
+/*负号功能按钮*/
+
+.input_board>span:nth-child(2) p {
+    display: block;
+    margin: 0 auto;
+    width: 30px;
+    height: 40px;
+    font-style: normal;
+    cursor: pointer;
+}
+
+.input_board>span:nth-child(2) p:last-child {
+    line-height: 0.7;
+    font-size: 36px;
+}
+
+
+/*负号功能按钮结束*/
+
+
+/*减号字体*/
+
+.input_board>span:nth-child(8) {
+    font-size: 36px;
+}
+
+
+/*等号样式*/
+
+.input_board>span:nth-child(16) {
+    background-color: #cccc00;
+    width: 109px;
+    height: 162px;
+    color: #404040;
+    line-height: 162px;
+    font-size: 34px;
+}
+
+
+/*数字0样式*/
+
+.input_board>span:nth-child(17) {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 220px;
+}
+
+
+/*小数点.样式*/
+
+.input_board>span:nth-child(18) {
+    position: absolute;
+    left: 222px;
+    bottom: 0;
+}
+
+
+/*每个按钮（span）之间有2px的间隙*/
+
+
+/*操作符区的颜色更深一点,第1,2,3,4,8,12的span的颜色重新设置为#303030*/
+
+.input_board>span:nth-child(1),
+.input_board>span:nth-child(2),
+.input_board>span:nth-child(3),
+.input_board>span:nth-child(4) {
+    margin-bottom: 2px;
+    background-color: #303030;
+}
+
+.input_board>span:nth-child(8),
+.input_board>span:nth-child(12) {
+    background-color: #303030;
+}
+
+.input_board>span:nth-child(9),
+.input_board>span:nth-child(10),
+.input_board>span:nth-child(11),
+.input_board>span:nth-child(12) {
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+
+.input_board>span:nth-child(13),
+.input_board>span:nth-child(14),
+.input_board>span:nth-child(15) {
+    margin-bottom: 2px;
+}
+
+.input_board>span:nth-child(1),
+.input_board>span:nth-child(5),
+.input_board>span:nth-child(9),
+.input_board>span:nth-child(13) {
+    margin-right: 2px;
+}
+
+.input_board>span:nth-child(2),
+.input_board>span:nth-child(6),
+.input_board>span:nth-child(10),
+.input_board>span:nth-child(14) {
+    margin-right: 2px;
+}
+
+.input_board>span:nth-child(3),
+.input_board>span:nth-child(7),
+.input_board>span:nth-child(11),
+.input_board>span:nth-child(15) {
+    margin-right: 2px;
+}
+
+
+/*输入区域结束*/

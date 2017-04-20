@@ -1,0 +1,41 @@
+body {
+    background-color: #f2f2f2;
+    font-size: 20px;
+}
+
+article {
+    position: relative;
+    margin: 20px auto;
+    padding: 20px;
+    width: 900px;
+    background-color: #fff;
+    box-sizing: border-box;
+}
+
+h1 {
+    text-align: center;
+}
+
+p {
+    margin: 16px 0 16px 0;
+}
+
+pre {
+    padding: 16px;
+    overflow: auto;
+    font-size: 85%;
+    line-height: 1.45;
+    background-color: #f6f8fa;
+    border-radius: 3px;
+}
+
+code {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    overflow: visible;
+    line-height: inherit;
+    word-wrap: normal;
+    background-color: transparent;
+    border: 0;
+}

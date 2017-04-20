@@ -1,0 +1,225 @@
+@charset "UTF-8";
+//颜色变量
+$bg_color:#e4dcdc;
+$green:#177505;
+$red:#ff0033;
+$font_green:#009933;
+$font_gray:#434343;
+$font_white:#fcfcfc;
+$font_red:#a41717;
+//尺寸变量
+$width:700px;
+$height:$width / 2;
+//字体变量
+$font_ll:$height * 0.12;
+$font_l:$height * 0.1;
+$font_n:$height * 0.06;
+$font_sn:$height * 0.05;
+$font_s:$height * 0.04;
+//border-box
+header,
+article,
+section,
+footer,
+a,
+dd,
+div,
+dl,
+i,
+img,
+input,
+li,
+p,
+span,
+ul {
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+
+body {
+    background-color: $bg_color;
+}
+
+.container {
+    position: relative;
+    margin: 50px auto;
+    width: $width;
+    height: $height;
+    background-color: #fff;
+    .board {
+        width: $width;
+        height: $height;
+        background-color: #fff;
+        //顶部
+        .top {
+            $height_top: $height * 0.38;
+            position: relative;
+            width: $width;
+            height: $height_top;
+            background-color: #fff;
+            &>div:nth-child(1) {
+                //标示44路
+                &>div:nth-child(1) {
+                    float: left;
+                    margin: $height_top *0.15 $width * 0.14 0 0;
+                    background-color: $red;
+                    width: $width * 0.18;
+                    height: $height_top * 0.4;
+                    line-height: $height_top * 0.4;
+                    font-size: $font_ll;
+                    color: $font_white;
+                    text-align: center;
+                }
+                //起点到终点
+                &>div:nth-child(2) {
+                    float: left;
+                    margin: $height_top *0.18 0 0 0;
+                    &>div {
+                        &>div {
+                            float: left;
+                            color: $font_green;
+                            text-align: center;
+                            p:nth-child(1) {
+                                font-size: $font_l;
+                                line-height: $font_l;
+                            }
+                            p:nth-child(2) {
+                                font-size: $font_sn;
+                                line-height: $font_sn;
+                            }
+                        }
+                        &>p {
+                            float: left;
+                            margin: 0 $width * 0.08 0 $width * 0.08;
+                            color: $font_green;
+                            font-size: $font_ll;
+                            line-height: $font_ll;
+                            text-align: center;
+                        }
+                        //清除浮动
+                        &:after {
+                            clear: both;
+                            content: '.';
+                            display: block;
+                            width: 0;
+                            height: 0;
+                            visibility: hidden;
+                        }
+                    }
+                    //目前站点
+                    &>span {
+                        display: block;
+                        margin: $width * 0.02 0 0 $width * 0.08;
+                        color: $font_red;
+                        font-size: $font_n;
+                        line-height: $font_n;
+                    }
+                }
+            }
+            //营业时间
+            &>div:nth-child(2) {
+                position: absolute;
+                left: $height_top *0.2;
+                bottom: $height_top *0.02;
+                color: $font_gray;
+                font-size: $font_s;
+            }
+        }
+        //底部
+        .bottom {
+            $height_bottom: $height * 0.62;
+            position: relative;
+            width: $width;
+            height: $height_bottom;
+            background-color: $green;
+            //站点详情
+            ul.bus_stop {
+                position: relative;
+                margin: 0 $width * 0.03 0 $width * 0.03;
+                width: $width * 0.94;
+                height: $height_bottom * 0.76;
+                color: $font_white;
+                li {
+                    float: left;
+                    padding: $height_bottom * 0.03 $height_bottom * 0.02;
+                    width: $width * 0.94 * ( 1 / 21);
+                    height: $height_bottom * 0.76;
+                    font-size: $font_sn;
+                    line-height: $font_sn;
+                    text-align: center;
+                    span {
+                        line-height: $height * 0.05;
+                    }
+                }
+                //给每个li元素中第二个span根据字数的不同设置不同的行高
+                //使得两端对齐
+                $li_number: 4,
+                5,
+                7,
+                5,
+                4,
+                5,
+                4,
+                5,
+                7,
+                4,
+                4,
+                5,
+                5,
+                7,
+                5,
+                7,
+                5,
+                4,
+                6,
+                5,
+                4;
+                $li_width: ( $height_bottom * 0.76) - ( $height_bottom * 0.03 * 2);
+                $span_3_w: $height * 0.05 * 3;
+                $span_w:$li_width - $span_3_w;
+                @for $i from 1 through length($li_number) {
+                    &>li:nth-child(#{$i}) span:nth-child(2) {
+                        line-height: $span_w / ( nth($li_number, $i) - 3);
+                    }
+                }
+            }
+            //票价说明
+            .arrow_div {
+                position: relative;
+                width: $width;
+                height: $height_bottom * 0.24;
+                background-color: #fff;
+                //说明文字
+                &>p {
+                    margin: 0 $width * 0.15 + $height_bottom * 0.09 0 $width * 0.15 - $height_bottom * 0.09;
+                    width: $width * 0.7;
+                    color: $font-gray;
+                    font-size: $font_s;
+                    text-align: center;
+                }
+                //红色长箭头
+                .arrow {
+                    position: relative;
+                    margin: 0 $width * 0.1 + $height_bottom * 0.09 0 $width * 0.1 - $height_bottom * 0.09;
+                    width: $width * 0.8;
+                    height: $height_bottom *0.04;
+                    background-color: $red;
+                    //css直角三角形
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 0;
+                        height: 0;
+                        position: absolute;
+                        right: -$height_bottom * 0.18;
+                        bottom: 0;
+                        border-top: $height_bottom *0.05 solid transparent;
+                        border-left: $height_bottom *0.22 solid $red;
+                        border-bottom: $height_bottom *0.05 solid $red;
+                        border-right: $height_bottom *0.22 solid transparent;
+                    }
+                }
+            }
+        }
+    }
+}

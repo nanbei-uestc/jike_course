@@ -1,0 +1,121 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+}
+
+
+/*应用透视*/
+
+.view {
+    perspective: 300px;
+    /*perspective-origin: 90px 90px;*/
+}
+
+
+/*立方体*/
+
+.cube {
+    position: relative;
+    margin: 300px auto 0 auto;
+    width: 180px;
+    height: 180px;
+    transform-style: preserve-3d;
+    animation: cube 8s infinite ease-in-out;
+}
+
+
+/*立方体动画*/
+
+@keyframes cube {
+    0% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    25% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+    50% {
+        transform: rotateX(0deg) rotateY(0deg);
+    }
+    75% {
+        transform: rotateX(360deg) rotateY(0deg);
+    }
+    100% {
+        transform: rotateX(360deg) rotateY(360deg);
+    }
+}
+
+
+/*立方体的每一个面*/
+
+.face {
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    border: 0;
+}
+
+
+/*立方体每一个面的变形*/
+
+.one {
+    transform: translateZ(90px);
+}
+
+.two {
+    transform: rotateX(-90deg) translateZ(90px);
+}
+
+.three {
+    transform: rotateX(90deg) translateZ(90px);
+}
+
+.four {
+    transform: translateZ(-90px);
+}
+
+.five {
+    transform: rotateY(-90deg) translateZ(90px);
+}
+
+.six {
+    transform: rotateY(90deg) translateZ(90px);
+}
+
+
+/*每一个面里面的六个div（title）的样式*/
+
+.face div {
+    position: relative;
+    float: left;
+    width: 58px;
+    height: 58px;
+    border: 1px solid #d1d1d1;
+    opacity: 1;
+    border-radius: 10px;
+}
+
+.one div {
+    background-color: #e5e1de;
+}
+
+.two div {
+    background-color: #ea1d24;
+}
+
+.three div {
+    background-color: #49a14d;
+}
+
+.four div {
+    background-color: #28439a;
+}
+
+.five div {
+    background-color: #f49f0e;
+}
+
+.six div {
+    background-color: #decc10;
+}

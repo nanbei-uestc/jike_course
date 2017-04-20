@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>盒子模型</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    
+    .container {
+        margin: 50px auto;
+        padding: 20px;
+        width: 300px;
+        height: 200px;
+        background-color: #553679;
+        border: 5px solid #004983;
+        box-shadow: 0px 0px 4px #000;
+    }
+    
+    .content {
+        width: 300px;
+        height: 200px;
+        background-color: #F37021;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .content>span {
+        display: block;
+        color: white;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    
+    .container_box_sizing {
+        margin: 50px auto;
+        padding: 20px;
+        width: 350px;
+        height: 250px;
+        background-color: #553679;
+        border: 5px solid #004983;
+        box-shadow: 0px 0px 4px #000;
+        box-sizing: border-box;
+    }
+    
+    .content_box_sizing {
+        margin: auto;
+        width: 300px;
+        height: 200px;
+        background-color: #F37021;
+        text-align: center;
+        overflow: hidden;
+    }
+    
+    .content_box_sizing>span {
+        display: block;
+        color: white;
+        font-size: 14px;
+        line-height: 20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="content">
+            <span>西北偏北，羊马很黑 </span>
+            <span>你饮酒落泪，西北偏北，把兰州喝醉 </span>
+            <span>把兰州喝醉，你居无定所 </span>
+            <span>姓马的母亲在喊你，我的回回，我的心肺 </span>
+            <span>什么麦加，什么姐妹</span>
+            <span>什么让你难以入睡 </span>
+            <span>河水的羊，灯火的嘴 </span>
+            <span>夜里唱过古兰经，做过忏悔 </span>
+            <span>谁的孤独，象一把刀，杀了黄河的水 </span>
+            <span>杀了黄河的水，你五体投地，这孤独是谁</span>
+        </div>
+    </div>
+    <hr/>
+    <div class="container_box_sizing">
+        <div class="content_box_sizing">
+            <span>西北偏北，羊马很黑 </span>
+            <span>你饮酒落泪，西北偏北，把兰州喝醉 </span>
+            <span>把兰州喝醉，你居无定所 </span>
+            <span>姓马的母亲在喊你，我的回回，我的心肺 </span>
+            <span>什么麦加，什么姐妹</span>
+            <span>什么让你难以入睡 </span>
+            <span>河水的羊，灯火的嘴 </span>
+            <span>夜里唱过古兰经，做过忏悔 </span>
+            <span>谁的孤独，象一把刀，杀了黄河的水 </span>
+            <span>杀了黄河的水，你五体投地，这孤独是谁</span>
+        </div>
+    </div>
+</body>
+
+</html>

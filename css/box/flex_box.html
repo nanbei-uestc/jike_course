@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>弹性伸缩盒</title>
+    <style type="text/css">
+    * {
+        margin: 0;
+        padding: 0;
+        font-size: 16px;
+        font-weight: bold;
+        font-family: arial;
+    }
+    
+    .container {
+        margin: 10px auto;
+        display: -webkit-box;
+        -webkit-box-align: center;
+        background-color: black;
+        height: 300px;
+    }
+    
+    .first {
+        -webkit-box-flex: 1;
+        -webkit-box-ordinal-group: 3;
+        height: 200px;
+        background-color: #553679;
+        text-align: center;
+        color: white;
+        line-height: 200px;
+    }
+    
+    .second {
+        -webkit-box-flex: 1;
+        height: 200px;
+        background-color: #004983;
+        text-align: center;
+        color: white;
+        line-height: 200px;
+    }
+    
+    .third {
+        -webkit-box-flex: 1;
+        height: 200px;
+        background-color: #F37021;
+        text-align: center;
+        color: white;
+        line-height: 200px;
+    }
+    
+    .container_new {
+        margin: 10px auto;
+        display: -webkit-flex;
+        -webkit-flex-direction: column;
+        -webkit-align-items: center;
+        background-color: black;
+        width: 600px;
+    }
+    
+    .first_new {
+        -webkit-flex: 1;
+        -webkit-order: 3;
+        width: 500px;
+        background-color: #553679;
+        text-align: center;
+        color: white;
+        line-height: 100px;
+    }
+    
+    .second_new {
+        -webkit-flex: 1;
+        width: 500px;
+        background-color: #004983;
+        text-align: center;
+        color: white;
+        line-height: 100px;
+    }
+    
+    .third_new {
+        -webkit-flex: 1;
+        /*-webkit-order:-1*/
+        ;
+        width: 500px;
+        background-color: #F37021;
+        text-align: center;
+        color: white;
+        line-height: 100px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="first">first</div>
+        <div class="second">second</div>
+        <div class="third">third</div>
+    </div>
+    <div class="container_new">
+        <div class="first_new">first</div>
+        <div class="second_new">second</div>
+        <div class="third_new">third</div>
+    </div>
+</body>
+
+</html>
